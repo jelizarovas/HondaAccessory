@@ -1,0 +1,95 @@
+{
+  "LX": {
+    "colorOptions": [
+      {
+        "exteriorName": "Canyon River Blue Metallic",
+        "exteriorCode": "B-640M",
+        "interior": [
+          {
+            "name": "Black",
+            "type": "Cloth"
+          }
+        ]
+      },
+      {
+        "exteriorName": "Crystal Black Pearl",
+        "exteriorCode": "NH-731P",
+        "interior": [
+          {
+            "name": "Black",
+            "type": "Cloth"
+          }
+        ]
+      },
+      {
+        "exteriorName": "Lunar Silver Metallic",
+        "exteriorCode": "NH-830M",
+        "interior": [
+          {
+            "name": "Black",
+            "type": "Cloth"
+          }
+        ]
+      },
+      {
+        "exteriorName": "Meteorite Gray Metallic",
+        "exteriorCode": "NH-904M",
+        "interior": [
+          {
+            "name": "Black",
+            "type": "Cloth"
+          }
+        ]
+      },
+      {
+        "exteriorName": "Platinum White Pearl",
+        "exteriorCode": "NH-883P",
+        "interior": [
+          {
+            "name": "Gray",
+            "type": "Cloth"
+          }
+        ]
+      },
+      {
+        "exteriorName": "Radiant Red Metallic",
+        "exteriorCode": "R-569M",
+        "interior": [
+          {
+            "name": "Gray",
+            "type": "Cloth"
+          }
+        ]
+      },
+      {
+        "exteriorName": "Still Night Pearl",
+        "exteriorCode": "NH-575P",
+        "interior": [
+          {
+            "name": "Black",
+            "type": "Cloth"
+          }
+        ]
+      },
+      {
+        "exteriorName": "Urban Gray Pearl",
+        "exteriorCode": "NH-912P",
+        "interior": [
+          {
+            "name": "Black",
+            "type": "Cloth"
+          }
+        ]
+      }
+    ],
+    "accessories": {
+      "disabled": [],
+      "groups": []
+    }
+  },
+  "EX": {},
+  "EX-L": {},
+  "Sport Hybrid": {},
+  "Sport-L Hybrid": {},
+  "Sport Touring": {}
+}
