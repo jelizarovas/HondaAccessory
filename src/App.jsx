@@ -3,10 +3,10 @@ import VehicleHeader from "./VehicleHeader";
 
 function App() {
   return (
-    <>
+    <div className="flex">
       <VehicleHeader />
       <Accessories />
-    </>
+    </div>
   );
 }
 

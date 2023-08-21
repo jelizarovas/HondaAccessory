@@ -36,7 +36,16 @@
     "Seat Back Protector ": 178.75
   },
   "Exterior": {
-    "18-in Black Alloy Wheel(5) ": 2580.0,
+    "CRV0024030": {
+      "name": "18-in Black Alloy Wheel",
+      "price": 2580.0,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/05-Interior/MY23-CRV-BAP-modal-All-Season-Floor-Mats-2x.jpg",
+      "description": "The extended sidewalls of the high-wall **All-Season Floor Mats** add extra protection to shield your original carpets from the wear and tear of everyday driving.\nSpecially designed to trap dirt\nMade of durable, all-weather material\nEasily cleaned with mild soap and water\nCustom appearance thanks to the molded logo\nNot intended for use with other floor mats.\nAlways secure floor mats with your vehicle's floor-mat anchors.\nSome components and colors may vary. Please see your Honda dealer for details.",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    },
     "18-in HPD Bronze Alloy Wheel(3) ": 2580.0,
     "Bike Attachment w/ Crossbars ": 799.38,
     "Bike Attachment w/ Roof Rails and Crossbars ": 1433.75,
