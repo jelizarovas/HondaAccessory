@@ -2,9 +2,10 @@ import React from "react";
 import accessories from "./data/CR-V+AccessoriesPrice.json";
 import ReactMarkdown from "react-markdown";
 
-export const Accessories = () => {
-  const [selectedAccessories, setSelectedAccessories] = React.useState({});
-
+export const Accessories = ({
+  selectedAccessories,
+  setSelectedAccessories,
+}) => {
   const handleCheckboxChange = (accessory, price, event) => {
     const updatedSelection = { ...selectedAccessories };
 
@@ -40,30 +41,38 @@ export const Accessories = () => {
   };
 
   return (
-    <div>
-      Accessories
-      <button onClick={selectAll}>Select All</button>
-      <button onClick={selectNone}>Select None</button>
-      {Object.keys(accessories).map((category) => (
-        <div key={category}>
-          <h4 className="bg-slate-200">{category}</h4>
-          <ul>
-            {Object.entries(accessories[category]).map(
-              ([accessoryName, accessory]) => {
-                return (
-                  <Accessory
-                    accessoryName={accessoryName}
-                    accessory={accessory}
-                    selectedAccessories={selectedAccessories}
-                    handleCheckboxChange={handleCheckboxChange}
-                  />
-                );
-              }
-            )}
-          </ul>
+    <div className="flex max-w-lg w-full overflow-y-auto h-screen">
+      <div className="">
+        <div className="flex flex-col  bg-white w-full">
+          <div>
+            <span> Accessories</span>
+            <button onClick={selectAll}>Select All</button>
+            <button onClick={selectNone}>Select None</button>
+          </div>
+          <div className="">Total Price: ${getTotalPrice()}</div>
         </div>
-      ))}
-      <div>Total Price: ${getTotalPrice()}</div>
+        <div className="flex flex-col overflow-y-auto">
+          {Object.keys(accessories).map((category) => (
+            <div key={category}>
+              <h4 className="bg-slate-200">{category}</h4>
+              <ul>
+                {Object.entries(accessories[category]).map(
+                  ([accessoryName, accessory]) => {
+                    return (
+                      <Accessory
+                        accessoryName={accessoryName}
+                        accessory={accessory}
+                        selectedAccessories={selectedAccessories}
+                        handleCheckboxChange={handleCheckboxChange}
+                      />
+                    );
+                  }
+                )}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
@@ -107,7 +116,7 @@ const Accessory = ({
     accessory?.description && accessory.description.split("\n").join("  \n");
 
   return (
-    <li key={accessoryName} className="relative cursor-pointer">
+    <li key={accessoryName} className="relative cursor-pointer text-xs">
       <label className="select-none cursor-pointer">
         <input
           type="checkbox"
@@ -115,10 +124,9 @@ const Accessory = ({
           onChange={(event) =>
             handleCheckboxChange(accessoryName, accessory.price, event)
           }
-        />{" "}
+        />
         <span>
-          {" "}
-          {accessoryName} - ${accessory.price || accessory}
+          {accessory?.name || accessoryName} ${accessory.price || accessory}
         </span>
         <span
           aria-label="information"

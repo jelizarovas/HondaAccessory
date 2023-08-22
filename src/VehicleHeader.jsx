@@ -17,11 +17,11 @@ const generateCarImageUrl = (
   return `https://automobiles.honda.com/platform/api/v4/images/exterior/${view}?config=${config}&width=${width}`;
 };
 
-function VehicleHeader() {
+function VehicleHeader({ selectedAccessories }) {
   const [trimLevel, setTrimLevel] = useState("LX");
   const [view, setView] = useState("02");
-  const [exteriorColor, setExteriorColor] = useState("default");
-  const [interiorColor, setInteriorColor] = useState("default");
+  const [exteriorColor, setExteriorColor] = useState("B-640M");
+  const [interiorColor, setInteriorColor] = useState("BK");
 
   const changeView = (event) => {
     setView(event.target.value);
@@ -41,6 +41,7 @@ function VehicleHeader() {
   const exteriorColorCode = "NH-904M";
   const interiorColorCode = "BK";
   const options = [
+    ...selectedAccessories,
     // "CRV0024001", //
     // "CRV0024002", //
     // "CRV0024003", //
@@ -50,7 +51,7 @@ function VehicleHeader() {
     // "CRV0024007", //
     // "CRV0024008", // Door visors
     // "CRV0024009", // Ski/Snoboard Attachment
-    // "CRV0024010",
+    // "CRV0024010", //
     // "CRV0024011", //
     // "CRV0024012", // 18-INCH HPD™ BRONZE ALLOY WHEELS
     // "CRV0024013", //
@@ -65,27 +66,27 @@ function VehicleHeader() {
     // "CRV0024022", //
     // "CRV0024023", // Roof rails
     // "CRV0024024", // Running Boards
-    // "CRV0024025",
+    // "CRV0024025",//
     // "CRV0024026", //
     // "CRV0024027", //
     // "CRV0024028", //
     // "CRV0024029", //
-    // "CRV0024030", //Black alloy wheels
+    // "CRV0024030", // Black alloy wheels
     // "CRV0024031", //
-    // "CRV0024032", //
+    // "CRV0024032", // Emblem - HPD
     // "CRV0024033", // Fender Emblems
     // "CRV0024034", // Roof Box - Short
     // "CRV0024035", // Surfboard Attachment
-    // "CRV0024036", //
+    // "CRV0024036", // Trailer Hitch
     // "CRV0024037", //
     // "CRV0024038", //
     // "CRV0024039", //
-    // "CRV0024040",
+    // "CRV0024040", // Emblems, Rear H-Mark and CR-V - Gloss Black
     // "CRV0024041", //
     // "CRV0024042", // Tailgate Spoiler
     // "CRV0024043", //
     // "CRV0024044", //
-    // "CRV0024045",
+    // "CRV0024045",//
     // "CRV0024046", //
     // "CRV0024047", //
     // "CRV0024048", //
@@ -95,14 +96,14 @@ function VehicleHeader() {
     // "CRV0024052", //
     // "CRV0024053", // - Moonroof Visor
     // "CRV0024054", //
-    // "CRV0024055",
-    // "CRV0024056", //
+    // "CRV0024055",//
+    // "CRV0024056", // Emblem, SPort - Gloss Black
     // "CRV0024057", //
     // "CRV0024058", //
     // "CRV0024059", //
-    // "CRV0024060",
+    // "CRV0024060",//
     // "CRV0024061", //
-    // "CRV0024062", //
+    // "CRV0024062", // Black Emblems Touring
     // "CRV0024063", //
     // "CRV0024064", //
     // "CRV0024065", //Crossbars
@@ -115,31 +116,31 @@ function VehicleHeader() {
     // "CRV0024072", // Roof Box - Short
     // "CRV0024073", //
     // "CRV0024074", //
-    // "CRV0024075",
+    // "CRV0024075",//
     // "CRV0024076", //
     // "CRV0024077", //
     // "CRV0024078", //
     // "CRV0024079", //
-    // "CRV0024080",
+    // "CRV0024080",//
     // "CRV0024081", //
     // "CRV0024082", //
     // "CRV0024083", //
     // "CRV0024084", //
-    // "CRV0024085",
-    // "CRV0024086", //
-    // "CRV0024087", //
-    // "CRV0024088", //
-    // "CRV0024089", //
-    // "CRV0024090",
-    // "CRV0024091", //
-    // "CRV0024092", //
-    // "CRV0024093", //
-    // "CRV0024094", //
-    // "CRV0024095",
-    // "CRV0024096", //
-    // "CRV0024097", //
-    // "CRV0024098", //
-    // "CRV0024099", //
+    // "CRV0024085",//
+    // "CRV0024086", //Wheel Lug Nuts Set, Black (20 qty)
+    // "CRV0024087", //Wheel Lock Nut Chrome
+    // "CRV0024088", //Wheel Lock Nut Black
+    // "CRV0024089", //Valve Stem Cap H-Mark, Chrome
+    // "CRV0024090", //Valve Stem Cap H-Mark, Black
+    // "CRV0024091", //Trailer Hitch HFA Adapter (Touring)
+    // "CRV0024092", //Trailer Hitch HFA Adapter (Touring)
+    // "CRV0024093", //Trailer Hitch Ball - 2-in
+    // "CRV0024094", //Trailer Hitch Ball - 1 7/8-in
+    // "CRV0024095", //Tent
+    // "CRV0024096", //Decal Graphics, HPD
+    // "CRV0024097", //Door Handle Protection Film
+    // "CRV0024098", //Door Edge Guard
+    // "CRV0024099", //Door Edge Film
   ];
 
   const imageUrl = generateCarImageUrl(
@@ -151,55 +152,70 @@ function VehicleHeader() {
   );
 
   return (
-    <div>
-      <ImageWithBackup
-        src={imageUrl}
-        backupSrc="/vehicles/2024/cr-v/MY23-CR-V-trim-jelly-LX-canyon-blue-2x.avif"
-        alt={`CR-V ${trimLevel} in ${exteriorColor}`}
-      />
-      <div>
-        <label htmlFor="view">View: </label>
-        <select id="view" onChange={changeView}>
-          {[
-            ["02", "Front"],
-            ["04", "Side"],
-            ["09", "Rear"],
-          ].map(([code, label]) => (
-            <option key={code} value={code}>
-              {label}
-            </option>
-          ))}
-        </select>
-        <label htmlFor="trim-level">Trim: </label>
-        <select id="trim-level" onChange={changeTrimLevel}>
-          {Object.keys(crv).map((trim) => (
-            <option key={trim} value={trim}>
-              {trim}
-            </option>
-          ))}
-        </select>
+    <div className="flex flex-col">
+      <div className="flex items-center  py-10 px-6 text-2xl space-x-6 uppercase ">
+        <TitleDropDown label={"2024"} />
+        <TitleDropDown label={"CR-V"} />
+        <TitleDropDown label={"AWD"} />
+        <TitleDropDown label={"Sport Touring"} />
       </div>
       <div>
-        <label htmlFor="exterior">Exterior: </label>
-        <select id="exterior" onChange={changeExterior}>
-          {crv?.[trimLevel]?.colorOptions.map((color, i) => (
-            <option key={i} value={color.exteriorCode}>
-              {color.exteriorName} - {color.exteriorCode}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label htmlFor="interior">Interior: </label>
-        <select id="interior" onChange={changeExterior}>
-          {crv?.[trimLevel]?.colorOptions?.[exteriorColor]?.interior.map(
-            (interior) => (
-              <option key={interior.name} value={interior.name}>
-                {interior.name} {interior.type}
+        <ImageWithBackup
+          src={imageUrl}
+          backupSrc="/vehicles/2024/cr-v/MY23-CR-V-trim-jelly-LX-canyon-blue-2x.avif"
+          alt={`CR-V ${trimLevel} in ${exteriorColor}`}
+        />
+        <div className="flex justify-between px-10">
+          <div id="view" className="flex space-x-2 px-2">
+            {[
+              ["02", "Front"],
+              ["04", "Side"],
+              ["09", "Rear"],
+            ].map(([code, label]) => (
+              <button
+                className={`${
+                  view === code ? "bg-indigo-100" : "bg-slate-100"
+                } px-4 py-2 rounded-lg`}
+                key={code}
+                value={code}
+                onClick={changeView}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <div>
+            {/* <label htmlFor="exterior">Exterior: </label> */}
+            <select className="px-4 py-2 rounded-lg bg-slate-100" id="exterior" onChange={changeExterior}>
+              {crv?.[trimLevel]?.colorOptions.map((color, i) => (
+                <option key={i} value={color.exteriorCode}>
+                  {color.exteriorName}
+                </option>
+              ))}
+            </select>
+          </div>
+          {/* <label htmlFor="trim-level">Trim: </label>
+          <select id="trim-level" onChange={changeTrimLevel}>
+            {Object.keys(crv).map((trim) => (
+              <option key={trim} value={trim}>
+                {trim}
               </option>
-            )
-          )}
-        </select>
+            ))}
+          </select> */}
+        </div>
+
+        {/* <div>
+          <label htmlFor="interior">Interior: </label>
+          <select id="interior" onChange={changeInterior}>
+            {crv?.[trimLevel]?.colorOptions?.[exteriorColor]?.interior.map(
+              (interior) => (
+                <option key={interior.name} value={interior.name}>
+                  {interior.name} {interior.type}
+                </option>
+              )
+            )}
+          </select>
+        </div> */}
       </div>
     </div>
   );
@@ -233,6 +249,18 @@ function ImageWithBackup({ src, backupSrc, alt }) {
       alt={alt}
       onError={handleError}
     />
+  );
+}
+
+function TitleDropDown({ label }) {
+  return (
+    <button
+      type="button"
+      className="border-b-4 hover:border-indigo-500 opacity-70 hover:opacity-100 cursor-pointer transition-all"
+      onClick={(e) => e.preventDefault()}
+    >
+      {label}
+    </button>
   );
 }
 
