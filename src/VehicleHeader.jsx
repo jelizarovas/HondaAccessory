@@ -153,19 +153,18 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
 
   return (
     <div className="flex flex-col h-screen max-h-screen w-full">
-     <div className="flex justify-between items-center text-2xl">
-
-     
-      <div className="flex items-center px-6  space-x-6 py-4 uppercase ">
-        <TitleDropDown label={"2024"} />
-        <TitleDropDown label={"CR-V"} />
-        <TitleDropDown label={"AWD"} />
-        <TitleDropDown label={"LX"} />
+      <div className="flex justify-between items-center text-2xl">
+        <div className="flex items-center px-6  space-x-6 py-4 uppercase ">
+          <TitleDropDown label={"2024"} />
+          <TitleDropDown label={"CR-V"} />
+          <TitleDropDown label={"AWD"} />
+          <TitleDropDown label={"LX"} />
+        </div>
+        <div className="px-4">Total ${totalPrice} </div>
       </div>
-      <div className="px-4">Total ${totalPrice}  </div>
-     </div>
       <div className="flex-grow w-full">
         <ImageWithBackup
+          key={imageUrl}
           src={imageUrl}
           backupSrc="/vehicles/2024/cr-v/MY23-CR-V-trim-jelly-LX-canyon-blue-2x.avif"
           alt={`CR-V ${trimLevel} in ${exteriorColor}`}
