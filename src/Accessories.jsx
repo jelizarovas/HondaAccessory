@@ -26,30 +26,33 @@ export const Accessories = ({
     return total.toFixed(2);
   };
 
-  const selectAll = () => {
-    const allAccessories = {};
-    Object.keys(accessories).forEach((category) => {
-      Object.entries(accessories[category]).forEach(([accessory, price]) => {
-        allAccessories[accessory] = price;
-      });
-    });
-    setSelectedAccessories(allAccessories);
-  };
+  // const selectAll = () => {
+  //   const allAccessories = {};
+  //   Object.keys(accessories).forEach((category) => {
+  //     Object.entries(accessories[category]).forEach(([accessory, price]) => {
+  //       allAccessories[accessory] = price;
+  //     });
+  //   });
+  //   setSelectedAccessories(allAccessories);
+  // };
 
   const selectNone = () => {
     setSelectedAccessories({});
   };
 
   return (
-    <div className="flex max-w-lg w-full overflow-y-auto h-screen">
+    <div className="flex w-full lg:max-w-lg  overflow-y-auto h-screen shadow-2xl px-2 py-2">
       <div className="">
         <div className="flex flex-col  bg-white w-full">
-          <div>
-            <span> Accessories</span>
-            <button onClick={selectAll}>Select All</button>
-            <button onClick={selectNone}>Select None</button>
+          <div className="flex justify-between items-center">
+            <span className="text-2xl py-4"> Accessories</span>
+           <div className="flex items-center space-x-2">
+
+            {/* <button onClick={selectAll}>Select All</button> */}
+            <button className="hover:underline" onClick={selectNone}>Select None</button>
+           </div>
           </div>
-          <div className="">Total Price: ${getTotalPrice()}</div>
+          {/* <div className="">Total Price: ${getTotalPrice()}</div> */}
         </div>
         <div className="flex flex-col overflow-y-auto">
           {Object.keys(accessories).map((category) => (
@@ -116,8 +119,8 @@ const Accessory = ({
     accessory?.description && accessory.description.split("\n").join("  \n");
 
   return (
-    <li key={accessoryName} className="relative cursor-pointer text-xs">
-      <label className="select-none cursor-pointer">
+    <li key={accessoryName} className="relative cursor-pointer ">
+      <label className="select-none cursor-pointer flex items-center space-x-2 py-0.5 px-2 hover:bg-indigo-100 transition-all">
         <input
           type="checkbox"
           checked={selectedAccessories.hasOwnProperty(accessoryName)}

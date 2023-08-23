@@ -17,7 +17,7 @@ const generateCarImageUrl = (
   return `https://automobiles.honda.com/platform/api/v4/images/exterior/${view}?config=${config}&width=${width}`;
 };
 
-function VehicleHeader({ selectedAccessories }) {
+function VehicleHeader({ selectedAccessories, totalPrice }) {
   const [trimLevel, setTrimLevel] = useState("LX");
   const [view, setView] = useState("02");
   const [exteriorColor, setExteriorColor] = useState("B-640M");
@@ -152,20 +152,27 @@ function VehicleHeader({ selectedAccessories }) {
   );
 
   return (
-    <div className="flex flex-col">
-      <div className="flex items-center  py-10 px-6 text-2xl space-x-6 uppercase ">
+    <div className="flex flex-col h-screen max-h-screen w-full">
+     <div className="flex justify-between items-center text-2xl">
+
+     
+      <div className="flex items-center px-6  space-x-6 py-4 uppercase ">
         <TitleDropDown label={"2024"} />
         <TitleDropDown label={"CR-V"} />
         <TitleDropDown label={"AWD"} />
-        <TitleDropDown label={"Sport Touring"} />
+        <TitleDropDown label={"LX"} />
       </div>
-      <div>
+      <div className="px-4">Total ${totalPrice}  </div>
+     </div>
+      <div className="flex-grow w-full">
         <ImageWithBackup
           src={imageUrl}
           backupSrc="/vehicles/2024/cr-v/MY23-CR-V-trim-jelly-LX-canyon-blue-2x.avif"
           alt={`CR-V ${trimLevel} in ${exteriorColor}`}
         />
-        <div className="flex justify-between px-10">
+      </div>
+      <div>
+        <div className=" flex justify-between px-10 py-4">
           <div id="view" className="flex space-x-2 px-2">
             {[
               ["02", "Front"],
@@ -186,7 +193,11 @@ function VehicleHeader({ selectedAccessories }) {
           </div>
           <div>
             {/* <label htmlFor="exterior">Exterior: </label> */}
-            <select className="px-4 py-2 rounded-lg bg-slate-100" id="exterior" onChange={changeExterior}>
+            <select
+              className="px-4 py-2 rounded-lg bg-slate-100"
+              id="exterior"
+              onChange={changeExterior}
+            >
               {crv?.[trimLevel]?.colorOptions.map((color, i) => (
                 <option key={i} value={color.exteriorCode}>
                   {color.exteriorName}
@@ -243,12 +254,21 @@ function ImageWithBackup({ src, backupSrc, alt }) {
   };
 
   return (
-    <img
-      className={`fade-image ${loading ? "fade-out" : ""}`}
-      src={src}
-      alt={alt}
-      onError={handleError}
-    />
+    <div
+      className="h-full w-full "
+      style={{
+        backgroundImage: `url(${src})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat" /* prevents the image from repeating */,
+        backgroundSize: "cover",
+      }}
+    ></div>
+    // <img
+    //   className={`fade-image ${loading ? "fade-out" : ""}`}
+    //   src={src}
+    //   alt={alt}
+    //   onError={handleError}
+    // />
   );
 }
 
