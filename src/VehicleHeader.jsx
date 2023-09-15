@@ -164,7 +164,7 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
       </div>
       <div className="flex-grow w-full">
         <ImageWithBackup
-          key={imageUrl}
+          // key={imageUrl}
           src={imageUrl}
           backupSrc="/vehicles/2024/cr-v/MY23-CR-V-trim-jelly-LX-canyon-blue-2x.avif"
           alt={`CR-V ${trimLevel} in ${exteriorColor}`}
@@ -232,44 +232,79 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
 }
 
 function ImageWithBackup({ src, backupSrc, alt }) {
-  const [loadedSrc, setLoadedSrc] = React.useState(src);
-  const [loading, setLoading] = React.useState(false);
+  console.log("Reneder");
+  const [srcs, setSrcs] = useState([src]);
 
   React.useEffect(() => {
-    setLoading(true);
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setLoadedSrc(src);
-      setLoading(false);
-    };
+    setSrcs((srcArray) => [src, ...srcArray]);
   }, [src]);
-
-  const handleError = (e) => {
-    if (e.target.src !== backupSrc) {
-      // Avoids looping if backupSrc also fails
-      e.target.src = backupSrc;
-    }
-  };
 
   return (
     <div
       className="h-full w-full "
       style={{
-        backgroundImage: `url(${src})`,
+        backgroundImage: `url(${src}), url(${srcs?.[1] || src})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat" /* prevents the image from repeating */,
         backgroundSize: "cover",
+        backgroundBlendMode: "lighten",
       }}
     ></div>
-    // <img
-    //   className={`fade-image ${loading ? "fade-out" : ""}`}
-    //   src={src}
-    //   alt={alt}
-    //   onError={handleError}
-    // />
+    // <div className="relative">
+    //   <img
+    //     className="absolute bg-blend-darken opacity-50 z-10"
+    //     src={srcs?.[1]}
+    //     alt={alt}
+    //   />
+    //   <img src={src} alt={alt} />
+
+    //   <div className="absolute flex flex-col">
+    //     <span>{src}</span>
+    //     <span>{srcs?.[1]}</span>
+    //   </div>
+    // </div>
   );
 }
+
+// function ImageWithBackup({ src, backupSrc, alt }) {
+//   const [loadedSrc, setLoadedSrc] = React.useState(src);
+//   const [loading, setLoading] = React.useState(false);
+
+//   React.useEffect(() => {
+//     setLoading(true);
+//     const img = new Image();
+//     img.src = src;
+//     img.onload = () => {
+//       setLoadedSrc(src);
+//       setLoading(false);
+//     };
+//   }, [src]);
+
+//   const handleError = (e) => {
+//     if (e.target.src !== backupSrc) {
+//       // Avoids looping if backupSrc also fails
+//       e.target.src = backupSrc;
+//     }
+//   };
+
+//   return (
+//     // <div
+//     //   className="h-full w-full "
+//     //   style={{
+//     //     backgroundImage: `url(${src})`,
+//     //     backgroundPosition: "center",
+//     //     backgroundRepeat: "no-repeat" /* prevents the image from repeating */,
+//     //     backgroundSize: "cover",
+//     //   }}
+//     // ></div>
+//     <img
+//       className={`fade-image ${loading ? "fade-out" : ""}`}
+//       src={src}
+//       alt={alt}
+//       onError={handleError}
+//     />
+//   );
+// }
 
 function TitleDropDown({ label }) {
   return (

@@ -1,6 +1,6 @@
 {
   "Interior": {
-    "All-Season Floor Mats": {
+    "CRV0024001I": {
       "name": "All-Season Floor Mats",
       "price": 270.63,
       "cost": 0.0,
@@ -10,7 +10,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Auto D/N Mirror w/ Homelink (EX-L, Tour) ": {
+    "CRV0024002I": {
       "name": "Auto D/N Mirror w/ Homelink (EX-L, Tour)",
       "price": 347.5,
       "cost": 0.0,
@@ -20,7 +20,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Cargo Cover ": {
+    "CRV0024003I": {
       "name": "Cargo Cover",
       "price": 245.63,
       "cost": 0.0,
@@ -30,7 +30,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Cargo Net ": {
+    "CRV0024004I": {
       "name": "Cargo Net ",
       "price": 91.88,
       "trimsAvailable": [],
@@ -39,7 +39,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Cargo Organizer ": {
+    "CRV0024005I": {
       "name": "Cargo Organizer ",
       "price": 130.63,
       "trimsAvailable": [],
@@ -48,7 +48,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Cargo Tray (Hybrid) ": {
+    "CRV0024006I": {
       "name": "Cargo Tray (Hybrid) ",
       "price": 183.13,
       "trimsAvailable": [],
@@ -57,7 +57,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Cargo Tray ": {
+    "CRV0024007I": {
       "name": "Cargo Tray ",
       "price": 183.13,
       "trimsAvailable": [],
@@ -66,7 +66,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Door Sill Protection Film(7) ": {
+    "CRV0024008I": {
       "name": "Door Sill Protection Film(7) ",
       "price": 207.5,
       "trimsAvailable": [],
@@ -75,7 +75,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "First Aid Kit ": {
+    "CRV0024009I": {
       "name": "First Aid Kit ",
       "price": 42.5,
       "trimsAvailable": [],
@@ -84,7 +84,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Illuminated Cargo Sill Trim (Hybrid) ": {
+    "CRV0024010I": {
       "name": "Illuminated Cargo Sill Trim (Hybrid) ",
       "price": 436.25,
       "trimsAvailable": [],
@@ -93,7 +93,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Illuminated Cargo Sill Trim ": {
+    "CRV0024011I": {
       "name": "Illuminated Cargo Sill Trim ",
       "price": 436.25,
       "trimsAvailable": [],
@@ -102,7 +102,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Illuminated Door Sill(8) ": {
+    "CRV0024012I": {
       "name": "Illuminated Door Sill(8) ",
       "price": 715.63,
       "trimsAvailable": [],
@@ -111,7 +111,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Interior Illumination ": {
+    "CRV0024013I": {
       "name": "Interior Illumination ",
       "price": 443.13,
       "trimsAvailable": [],
@@ -120,7 +120,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Rear Passenger Window Shades ": {
+    "CRV0024014I": {
       "name": "Rear Passenger Window Shades ",
       "price": 334.38,
       "trimsAvailable": [],
@@ -129,7 +129,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Seat Back Protector (Hybrid) ": {
+    "CRV0024015I": {
       "name": "Seat Back Protector (Hybrid) ",
       "price": 178.75,
       "trimsAvailable": [],
@@ -138,7 +138,7 @@
       "needsInstalled": [],
       "cannotCombineWith": []
     },
-    "Seat Back Protector ": {
+    "CRV0024016I": {
       "name": "Seat Back Protector ",
       "price": 178.75,
       "trimsAvailable": [],
@@ -635,13 +635,85 @@
     }
   },
   "Electrical": {
-    "Engine Block Heater (Hybrid) ": 421.88,
-    "Engine Block Heater ": 403.75,
-    "Heated Steering Wheel (Hybrid) ": 1214.38,
-    "Heated Steering Wheel ": 1214.38,
-    "Parking Sensors (Hybrid) ": 1850.0,
-    "Parking Sensors ": 1850.0,
-    "Wireless Charger (EX, Sport) ": 685.0,
-    "Wireless Charger (LX) ": 643.75
+    "CRV0024001E": {
+      "name": "Engine Block Heater (Hybrid)",
+      "price": 421.88,
+      "cost": 0,
+      "trimsAvailable": [],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    },
+    "CRV0024002E": {
+      "name": "Engine Block Heater",
+      "price": 403.75,
+      "cost": 0,
+      "trimsAvailable": [],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    },
+    "CRV0024003E": {
+      "name": "Heated Steering Wheel (Hybrid)",
+      "price": 1214.38,
+      "cost": 0,
+      "trimsAvailable": [],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    },
+    "CRV0024004E": {
+      "name": "Heated Steering Wheel",
+      "price": 1214.38,
+      "cost": 0,
+      "trimsAvailable": [],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    },
+    "CRV0024005E": {
+      "name": "Parking Sensors (Hybrid)",
+      "price": 1850.0,
+      "cost": 0,
+      "trimsAvailable": [],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    },
+    "CRV0024006E": {
+      "name": "Parking Sensors",
+      "price": 1850.0,
+      "cost": 0,
+      "trimsAvailable": [],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    },
+    "CRV0024007E": {
+      "name": "Wireless Charger (EX, Sport)",
+      "price": 685.0,
+      "cost": 0,
+      "trimsAvailable": [],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    },
+    "CRV0024008E": {
+      "name": "Wireless Charger (LX)",
+      "price": 643.75,
+      "cost": 0,
+      "trimsAvailable": [],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": []
+    }
   }
 }
