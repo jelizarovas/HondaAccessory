@@ -8,5 +8,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script async src="https://docs.opencv.org/master/opencv.js" onload="initialize();" type="text/javascript"></script>
+    <script type="text/javascript">
+      function initialize() {
+        if (typeof cv === 'undefined') {
+          setTimeout(initialize, 50);
+          return;
+        }
+        // cv.onRuntimeInitialized will be triggered once OpenCV is ready to use.
+        cv.onRuntimeInitialized = function() {
+          document.dispatchEvent(new Event('onOpenCvReady'));
+        };
+      }
+    </script>
   </body>
 </html>

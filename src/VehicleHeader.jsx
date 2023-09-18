@@ -243,7 +243,8 @@ function ImageWithBackup({ src, backupSrc, alt }) {
     <div
       className="h-full w-full "
       style={{
-        backgroundImage: `url(${src}), url(${srcs?.[1] || src})`,
+        // backgroundImage: `url(${src}), url(${srcs?.[1] || src})`,
+        backgroundImage: `url(${src})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat" /* prevents the image from repeating */,
         backgroundSize: "cover",
