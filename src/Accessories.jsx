@@ -2,10 +2,7 @@ import React from "react";
 import accessories from "./data/CR-V+AccessoriesPrice.json";
 import ReactMarkdown from "react-markdown";
 
-export const Accessories = ({
-  selectedAccessories,
-  setSelectedAccessories,
-}) => {
+export const Accessories = ({ selectedAccessories, setSelectedAccessories }) => {
   const handleCheckboxChange = (accessory, price, event) => {
     const updatedSelection = { ...selectedAccessories };
 
@@ -19,10 +16,7 @@ export const Accessories = ({
   };
 
   const getTotalPrice = () => {
-    const total = Object.values(selectedAccessories).reduce(
-      (sum, price) => sum + price,
-      0
-    );
+    const total = Object.values(selectedAccessories).reduce((sum, price) => sum + price, 0);
     return total.toFixed(2);
   };
 
@@ -41,36 +35,35 @@ export const Accessories = ({
   };
 
   return (
-    <div className="flex w-full lg:max-w-lg  overflow-y-auto h-screen shadow-2xl px-2 py-2">
+    <div className="flex relative w-full lg:max-w-lg overflow-y-auto  h-screen shadow-2xl   py-2">
       <div className="">
-        <div className="flex flex-col  bg-white w-full">
+        <div className="flex flex-col  bg-white w-full px-2">
           <div className="flex justify-between items-center">
             <span className="text-2xl py-4"> Accessories</span>
-           <div className="flex items-center space-x-2">
-
-            {/* <button onClick={selectAll}>Select All</button> */}
-            <button className="hover:underline" onClick={selectNone}>Select None</button>
-           </div>
+            <div className="flex items-center space-x-2">
+              {/* <button onClick={selectAll}>Select All</button> */}
+              <button className="hover:underline" onClick={selectNone}>
+                Select None
+              </button>
+            </div>
           </div>
           {/* <div className="">Total Price: ${getTotalPrice()}</div> */}
         </div>
-        <div className="flex flex-col overflow-y-auto">
+        <div className="flex flex-col overflow-y ">
           {Object.keys(accessories).map((category) => (
             <div key={category}>
               <h4 className="bg-slate-200">{category}</h4>
               <ul>
-                {Object.entries(accessories[category]).map(
-                  ([accessoryName, accessory]) => {
-                    return (
-                      <Accessory
-                        accessoryName={accessoryName}
-                        accessory={accessory}
-                        selectedAccessories={selectedAccessories}
-                        handleCheckboxChange={handleCheckboxChange}
-                      />
-                    );
-                  }
-                )}
+                {Object.entries(accessories[category]).map(([accessoryName, accessory]) => {
+                  return (
+                    <Accessory
+                      accessoryName={accessoryName}
+                      accessory={accessory}
+                      selectedAccessories={selectedAccessories}
+                      handleCheckboxChange={handleCheckboxChange}
+                    />
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -80,13 +73,7 @@ export const Accessories = ({
   );
 };
 
-const Accessory = ({
-  accessoryName,
-  accessory,
-  selectedAccessories,
-  handleCheckboxChange,
-  ...props
-}) => {
+const Accessory = ({ accessoryName, accessory, selectedAccessories, handleCheckboxChange, ...props }) => {
   const [isOpen, setOpen] = React.useState(false);
 
   const timerRef = React.useRef(null);
@@ -115,8 +102,7 @@ const Accessory = ({
     setOpen(false);
   };
 
-  const markdownText =
-    accessory?.description && accessory.description.split("\n").join("  \n");
+  const markdownText = accessory?.description && accessory.description.split("\n").join("  \n");
 
   return (
     <li key={accessoryName} className="relative cursor-pointer ">
@@ -124,9 +110,7 @@ const Accessory = ({
         <input
           type="checkbox"
           checked={selectedAccessories.hasOwnProperty(accessoryName)}
-          onChange={(event) =>
-            handleCheckboxChange(accessoryName, accessory.price, event)
-          }
+          onChange={(event) => handleCheckboxChange(accessoryName, accessory.price, event)}
         />
         <span>
           {accessory?.name || accessoryName} ${accessory.price || accessory}

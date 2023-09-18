@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import crv from "./data/CR-V_trims.json";
+import { ImageProccessor } from "./ImageProccessor";
+import { GetPdfButton } from "./GetPdfButton";
 
 const direction = [2, 4, 9];
 
-const generateCarImageUrl = (
-  view,
-  model,
-  exteriorColor,
-  interiorColor,
-  options,
-  width = 1400
-) => {
+const generateCarImageUrl = (view, model, exteriorColor, interiorColor, options, width = 1400) => {
   const config = `M:${model}$EC:${exteriorColor}$HC:undefined$IC:${interiorColor}$O:${options.join(
     ","
   )}$F:FIFS$ECC:GC$ECX:`;
@@ -143,16 +138,10 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
     // "CRV0024099", //Door Edge Film
   ];
 
-  const imageUrl = generateCarImageUrl(
-    view,
-    model,
-    exteriorColor,
-    interiorColorCode,
-    options
-  );
+  const imageUrl = generateCarImageUrl(view, model, exteriorColor, interiorColorCode, options);
 
   return (
-    <div className="flex flex-col h-screen max-h-screen w-full">
+    <div className="flex flex-col lg:h-screen max-h-screen w-full">
       <div className="flex justify-between items-center text-2xl">
         <div className="flex items-center px-6  space-x-6 py-4 uppercase ">
           <TitleDropDown label={"2024"} />
@@ -160,9 +149,9 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
           <TitleDropDown label={"AWD"} />
           <TitleDropDown label={"LX"} />
         </div>
-        <div className="px-4">Total ${totalPrice} </div>
+        <GetPdfButton totalPrice={totalPrice} />
       </div>
-      <div className="flex-grow w-full">
+      <div className="flex-grow lg:w-full">
         <ImageWithBackup
           // key={imageUrl}
           src={imageUrl}
@@ -179,9 +168,7 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
               ["09", "Rear"],
             ].map(([code, label]) => (
               <button
-                className={`${
-                  view === code ? "bg-indigo-100" : "bg-slate-100"
-                } px-4 py-2 rounded-lg`}
+                className={`${view === code ? "bg-indigo-100" : "bg-slate-100"} px-4 py-2 rounded-lg`}
                 key={code}
                 value={code}
                 onClick={changeView}
@@ -192,11 +179,7 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
           </div>
           <div>
             {/* <label htmlFor="exterior">Exterior: </label> */}
-            <select
-              className="px-4 py-2 rounded-lg bg-slate-100"
-              id="exterior"
-              onChange={changeExterior}
-            >
+            <select className="px-4 py-2 rounded-lg bg-slate-100" id="exterior" onChange={changeExterior}>
               {crv?.[trimLevel]?.colorOptions.map((color, i) => (
                 <option key={i} value={color.exteriorCode}>
                   {color.exteriorName}
@@ -240,30 +223,32 @@ function ImageWithBackup({ src, backupSrc, alt }) {
   }, [src]);
 
   return (
-    <div
-      className="h-full w-full "
-      style={{
-        // backgroundImage: `url(${src}), url(${srcs?.[1] || src})`,
-        backgroundImage: `url(${src})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat" /* prevents the image from repeating */,
-        backgroundSize: "cover",
-        backgroundBlendMode: "lighten",
-      }}
-    ></div>
-    // <div className="relative">
-    //   <img
-    //     className="absolute bg-blend-darken opacity-50 z-10"
-    //     src={srcs?.[1]}
-    //     alt={alt}
-    //   />
-    //   <img src={src} alt={alt} />
+    // <ImageProccessor imgOld={srcs?.[1] || src} imgNew={src} />
+    // <ImageProccessor /> TURN ON FOR EFFECT - cross origin error for now!!!!!!!!!!
+    // <div
+    //   className="h-full w-full "
+    //   style={{
+    //     // backgroundImage: `url(${src}), url(${srcs?.[1] || src})`,
+    //     backgroundImage: `url(${src})`,
+    //     backgroundPosition: "center",
+    //     backgroundRepeat: "no-repeat" /* prevents the image from repeating */,
+    //     backgroundSize: "contain",
+    //     backgroundBlendMode: "lighten",
+    //   }}
+    // ></div>
+    <div className="relative lg:h-full flex items-center justify-center h-full">
+      {/* <img
+        className="absolute bg-blend-darken opacity-50 z-10"
+        src={srcs?.[1]}
+        alt={alt}
+      /> */}
+      <img src={src} alt={alt} className="lg:object-fit object-contain transition-all lg:h-full " />
 
-    //   <div className="absolute flex flex-col">
-    //     <span>{src}</span>
-    //     <span>{srcs?.[1]}</span>
-    //   </div>
-    // </div>
+      {/* <div className="absolute flex flex-col">
+        <span>{src}</span>
+        <span>{srcs?.[1]}</span>
+      </div> */}
+    </div>
   );
 }
 
