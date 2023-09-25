@@ -12,7 +12,7 @@ const generateCarImageUrl = (view, model, exteriorColor, interiorColor, options,
   return `https://automobiles.honda.com/platform/api/v4/images/exterior/${view}?config=${config}&width=${width}`;
 };
 
-function VehicleHeader({ selectedAccessories, totalPrice }) {
+function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
   const [trimLevel, setTrimLevel] = useState("LX");
   const [view, setView] = useState("02");
   const [exteriorColor, setExteriorColor] = useState("B-640M");
@@ -36,7 +36,7 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
   const exteriorColorCode = "NH-904M";
   const interiorColorCode = "BK";
   const options = [
-    ...selectedAccessories,
+    ...Object.keys(selectedAccessories),
     // "CRV0024001", //
     // "CRV0024002", //
     // "CRV0024003", //
@@ -149,7 +149,12 @@ function VehicleHeader({ selectedAccessories, totalPrice }) {
           <TitleDropDown label={"AWD"} />
           <TitleDropDown label={"LX"} />
         </div>
-        <GetPdfButton totalPrice={totalPrice} />
+        <GetPdfButton
+          totalPrice={totalPrice}
+          accessoriesData={accessoriesData}
+          selectedAccessories={selectedAccessories}
+          pdfName="/pdfs/CR-V2024-form.pdf"
+        />
       </div>
       <div className="flex-grow lg:w-full">
         <ImageWithBackup

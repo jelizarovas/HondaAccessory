@@ -1,6 +1,8 @@
 import React from "react";
 import { Accessories } from "./Accessories";
 import VehicleHeader from "./VehicleHeader";
+import accessories from "./data/CR-V+AccessoriesPrice.json";
+
 import { ImageProccessor } from "./ImageProccessor";
 
 function App() {
@@ -15,8 +17,13 @@ function App() {
   return (
     <div className="flex flex-col lg:flex-row">
       {/* <ImageProccessor /> */}
-      <VehicleHeader selectedAccessories={Object.keys(selectedAccessories)} totalPrice={getTotalPrice()} />
+      <VehicleHeader
+        accessoriesData={accessories}
+        selectedAccessories={selectedAccessories}
+        totalPrice={getTotalPrice()}
+      />
       <Accessories
+        accessories={accessories}
         selectedAccessories={selectedAccessories}
         setSelectedAccessories={setSelectedAccessories}
       />

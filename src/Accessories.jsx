@@ -1,8 +1,7 @@
 import React from "react";
-import accessories from "./data/CR-V+AccessoriesPrice.json";
 import ReactMarkdown from "react-markdown";
 
-export const Accessories = ({ selectedAccessories, setSelectedAccessories }) => {
+export const Accessories = ({ accessories, selectedAccessories, setSelectedAccessories }) => {
   const handleCheckboxChange = (accessory, price, event) => {
     const updatedSelection = { ...selectedAccessories };
 

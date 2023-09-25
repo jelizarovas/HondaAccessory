@@ -1,66 +1,61 @@
 import React from "react";
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 import download from "downloadjs";
-async function createPdf() {
-  const pdfDoc = await PDFDocument.create();
-  const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman);
-  const page = pdfDoc.addPage();
-  const { width, height } = page.getSize();
-  const fontSize = 30;
-  page.drawText("Creating PDFs in JavaScript is awesome!", {
-    x: 50,
-    y: height - 4 * fontSize,
-    size: fontSize,
-    font: timesRomanFont,
-    color: rgb(0, 0.53, 0.71),
-  });
-  const pdfBytes = await pdfDoc.save();
 
-  download(pdfBytes, "text.pdf", "application/pdf");
-}
-
-export const GetPdfButton = ({ totalPrice }) => {
+export const GetPdfButton = ({ totalPrice, pdfName, accessoriesData, selectedAccessories }) => {
   return (
-    <button onClick={() => createPdf()} className="px-4 bg-indigo-400 py-2 rounded mr-2">
+    <button
+      onClick={() => fillPDF(pdfName, accessoriesData, selectedAccessories)}
+      className="px-4 bg-indigo-400 py-2 rounded mr-2"
+    >
       Get ${totalPrice}{" "}
     </button>
   );
 };
+const formCodeToFieldMapping = (code) => ({
+  checkboxCode: `AC${code}`,
+  priceCode: `AP${code}`,
+});
 
-async function fillPDF(data) {
-  // const pdfDoc = await PDFDocument.create();
-  // const form = pdfDoc.getForm();
+async function fillPDF(pdfName, accessoriesData, selectedAccessories) {
+  const baseUrl = window.location.origin.toString() /*+ import.meta.env.PUBLIC_URL*/ + "/";
 
-  // const pdfs = ["pdf/Arbitration agreement.pdf", "Buyers Guide mk.pdf","As Is Disclaimer.pdf","pdf/Buyers order.PDF", ];
+  const formUrl = baseUrl + pdfName;
+  const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
+  const pdfDoc = await PDFDocument.load(formPdfBytes);
+  const form = pdfDoc.getForm();
 
-  const baseUrl = window.location.origin.toString() + process.env.PUBLIC_URL + "/";
-  const mergeDoc = await PDFDocument.create();
+  Object.values(accessoriesData).forEach((category) => {
+    Object.entries(category).forEach(([aId, accessory]) => {
+      const mapping = formCodeToFieldMapping(accessory.pdfFormCode);
 
-  for (const pdf of pdfs) {
-    const formUrl = baseUrl + pdf.name;
-    const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
-    const pdfDoc = await PDFDocument.load(formPdfBytes);
-    const form = pdfDoc.getForm();
-    Object.entries(pdf.fields).forEach(([fieldName, f]) => {
-      //   console.log({ fieldName, value: data[f] });
-      setField(fieldName, data[f], form);
+      let finalPrice = parseFloat(accessory.price).toFixed(2);
+
+      // Check if there's an adjusted price in selectedAccessories and if it's less than the default price
+      if (selectedAccessories[aId] && selectedAccessories[aId] < accessory.price) {
+        finalPrice = parseFloat(selectedAccessories[aId]).toFixed(2);
+      }
+
+      // Fill the price
+      const priceField = form.getTextField(mapping.priceCode);
+      priceField.setText(String(finalPrice));
+
+      // Check the checkbox if the accessory is selected
+      const checkbox = form.getCheckBox(mapping.checkboxCode);
+      if (selectedAccessories[aId]) {
+        checkbox.check();
+      } else {
+        checkbox.uncheck();
+      }
     });
+  });
 
-    form.flatten();
-    await pdfDoc.save();
-
-    const coppiedTempPages = await mergeDoc.copyPages(pdfDoc, pdfDoc.getPageIndices());
-
-    coppiedTempPages.forEach((page) => mergeDoc.addPage(page));
-  }
+  form.flatten();
+  await pdfDoc.save();
 
   const now = new Date();
 
-  return download(
-    await mergeDoc.save(),
-    `DOCs ${data.year} ${data.make} ${data.model} ${data.fullName} ${getFormattedDate(now, " ")}.pdf`,
-    "application/pdf"
-  );
+  return download(await pdfDoc.save(), `DOCs ${getFormattedDate(now, " ")}.pdf`, "application/pdf");
 }
 
 const setField = (pdfField, value, form, condition = false) => {
@@ -69,22 +64,6 @@ const setField = (pdfField, value, form, condition = false) => {
   const f = form.getTextField(pdfField);
   if (!f) return;
   return f.setText(value.toString());
-};
-
-const pdfs = [
-  {
-    name: "pdfs/CR-V2024-form.pdf",
-    fields: {
-      AC001: "All-Season Floor Mats",
-    },
-  },
-];
-
-const dealer = {
-  dealerName: "Leaf Autos LLC",
-  dealerPhone: "(206) 602-4363",
-  dealerAddress: "2501 B Harbor Ave SW, Seattle, WA 98126",
-  dealerEmail: "leafautos@gmail.com",
 };
 
 function getFormattedDate(date, separator = "/") {

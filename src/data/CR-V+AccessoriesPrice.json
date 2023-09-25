@@ -9,7 +9,7 @@
       "description": "The extended sidewalls of the high-wall **All-Season Floor Mats** add extra protection to shield your original carpets from the wear and tear of everyday driving.\nSpecially designed to trap dirt\nMade of durable, all-weather material\nEasily cleaned with mild soap and water\nCustom appearance thanks to the molded logo\nNot intended for use with other floor mats.\nAlways secure floor mats with your vehicle's floor-mat anchors.\nSome components and colors may vary. Please see your Honda dealer for details.",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC001"
+      "pdfFormCode": "001"
     },
     "CRV0024002I": {
       "name": "Auto D/N Mirror w/ Homelink (EX-L, Tour)",
@@ -20,7 +20,7 @@
       "description": "The Cargo Cover keeps items in the back out of view and helps protect them from damaging UV rays.\nMade of screen-type material\nFully retractable",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC002"
+      "pdfFormCode": "002"
     },
     "CRV0024003I": {
       "name": "Cargo Cover",
@@ -31,7 +31,7 @@
       "description": "The Cargo Cover keeps items in the back out of view and helps protect them from damaging UV rays.\nMade of screen-type material\nFully retractable",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC003"
+      "pdfFormCode": "003"
     },
     "CRV0024004I": {
       "name": "Cargo Net ",
@@ -41,7 +41,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC004"
+      "pdfFormCode": "004"
     },
     "CRV0024005I": {
       "name": "Cargo Organizer ",
@@ -51,7 +51,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC005"
+      "pdfFormCode": "005"
     },
     "CRV0024006I": {
       "name": "Cargo Tray (Hybrid) ",
@@ -61,7 +61,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC006"
+      "pdfFormCode": "006"
     },
     "CRV0024007I": {
       "name": "Cargo Tray ",
@@ -71,7 +71,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC007"
+      "pdfFormCode": "007"
     },
     "CRV0024008I": {
       "name": "Door Sill Protection Film(7) ",
@@ -81,7 +81,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC008"
+      "pdfFormCode": "008"
     },
     "CRV0024009I": {
       "name": "First Aid Kit ",
@@ -91,7 +91,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC009"
+      "pdfFormCode": "009"
     },
     "CRV0024010I": {
       "name": "Illuminated Cargo Sill Trim (Hybrid) ",
@@ -101,7 +101,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC010"
+      "pdfFormCode": "010"
     },
     "CRV0024011I": {
       "name": "Illuminated Cargo Sill Trim ",
@@ -111,7 +111,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC011"
+      "pdfFormCode": "011"
     },
     "CRV0024012I": {
       "name": "Illuminated Door Sill(8) ",
@@ -121,7 +121,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC012"
+      "pdfFormCode": "012"
     },
     "CRV0024013I": {
       "name": "Interior Illumination ",
@@ -131,7 +131,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC013"
+      "pdfFormCode": "013"
     },
     "CRV0024014I": {
       "name": "Rear Passenger Window Shades ",
@@ -141,7 +141,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC014"
+      "pdfFormCode": "014"
     },
     "CRV0024015I": {
       "name": "Seat Back Protector (Hybrid) ",
@@ -151,7 +151,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC015"
+      "pdfFormCode": "015"
     },
     "CRV0024016I": {
       "name": "Seat Back Protector ",
@@ -161,7 +161,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC016"
+      "pdfFormCode": "016"
     }
   },
   "Exterior": {
@@ -174,7 +174,7 @@
       "description": "The perfect way to add extra ruggedness to your new CR-V. Alloy wheels not only look amazing, they can help ensure the longevity of wheel bearings and suspension joints.\nWheels are stringently tested to match all Honda requirements as well as those from the Society of Automotive Engineers\nWidth-matched to fit your car precisely for proper clearance and handling\nClear-coat finish over the front of the wheels helps prevent corrosion and makes cleaning easier\nNew tires are required for some applications.",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC017"
+      "pdfFormCode": "017"
     },
     "CRV0024012": {
       "name": "18-in HPD Bronze Alloy Wheel",
@@ -185,7 +185,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC018"
+      "pdfFormCode": "018"
     },
     "CRV0024004": {
       "name": "Bike Attachment w/ Crossbars",
@@ -196,7 +196,7 @@
       "description": "",
       "needsInstalled": ["CRV0024065"],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC019"
+      "pdfFormCode": "019"
     },
     "CRV0024070": {
       "name": "Bike Attachment w/ Roof Rails and Crossbars",
@@ -207,7 +207,7 @@
       "description": "",
       "needsInstalled": ["CRV0024065", "CRV0024023"],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC020"
+      "pdfFormCode": "020"
     },
     "CRV0024040": {
       "name": "Black Emblems (H Mark - RR only, CR-V)",
@@ -218,7 +218,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC021"
+      "pdfFormCode": "021"
     },
     "CRV0024056": {
       "name": "Black Emblems (Sport)",
@@ -229,7 +229,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC022"
+      "pdfFormCode": "022"
     },
     "CRV0024062": {
       "name": "Black Emblems (Touring)",
@@ -240,7 +240,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC023"
+      "pdfFormCode": "023"
     },
     "CRV0024005": {
       "name": "Body Side Molding",
@@ -251,7 +251,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC024"
+      "pdfFormCode": "024"
     },
     "CRV0024006": {
       "name": "Crossbars",
@@ -262,7 +262,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC025"
+      "pdfFormCode": "025"
     },
 
     "CRV0024100": {
@@ -274,7 +274,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC025"
+      "pdfFormCode": "025"
     },
     "CRV0024099": {
       "name": "Door Edge Film",
@@ -285,7 +285,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC026"
+      "pdfFormCode": "026"
     },
     "CRV0024098": {
       "name": "Door Edge Guard",
@@ -296,7 +296,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC027"
+      "pdfFormCode": "027"
     },
     "CRV0024097": {
       "name": "Door Handle Protection Film",
@@ -307,7 +307,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC028"
+      "pdfFormCode": "028"
     },
     "CRV0024008": {
       "name": "Door Visors",
@@ -318,7 +318,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC030"
+      "pdfFormCode": "030"
     },
     "CRV0024032": {
       "name": "Emblem - HPD",
@@ -329,7 +329,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC031"
+      "pdfFormCode": "031"
     },
     "CRV0024033": {
       "name": "Fender Emblems",
@@ -340,7 +340,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC032"
+      "pdfFormCode": "032"
     },
     "CRV0024049": {
       "name": "Fender Flares",
@@ -351,7 +351,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC033"
+      "pdfFormCode": "033"
     },
     "CRV0024014": {
       "name": "Front Lower Bumper Trim",
@@ -362,7 +362,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC034"
+      "pdfFormCode": "034"
     },
     "CRV0024050": {
       "name": "Hood Air Deflector",
@@ -373,7 +373,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC035"
+      "pdfFormCode": "035"
     },
     "CRV0024051": {
       "name": "Kayak Attachment w/ Crossbars",
@@ -384,7 +384,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC036"
+      "pdfFormCode": "036"
     },
     "CRV0024066": {
       "name": "Kayak Attachment w/ Roof Rails and Crossbars",
@@ -395,7 +395,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC037"
+      "pdfFormCode": "037"
     },
     "CRV0024019": {
       "name": "Lower Door Trim Accent",
@@ -406,7 +406,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC038"
+      "pdfFormCode": "038"
     },
     "CRV0024053": {
       "name": "Moonroof Visor",
@@ -417,7 +417,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC039"
+      "pdfFormCode": "039"
     },
     "CRV0024015": {
       "name": "Roof Basket w/ Crossbars",
@@ -428,7 +428,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC040"
+      "pdfFormCode": "040"
     },
 
     "CRV0024071": {
@@ -440,7 +440,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC041"
+      "pdfFormCode": "041"
     },
 
     "CRV0024034": {
@@ -452,7 +452,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC042"
+      "pdfFormCode": "042"
     },
 
     "CRV0024023": {
@@ -464,7 +464,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC043"
+      "pdfFormCode": "043"
     },
 
     "CRV0024072": {
@@ -476,7 +476,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC044"
+      "pdfFormCode": "044"
     },
 
     "CRV0024024": {
@@ -488,7 +488,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC045"
+      "pdfFormCode": "045"
     },
 
     "CRV0024067": {
@@ -500,7 +500,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC046"
+      "pdfFormCode": "046"
     },
 
     "CRV0024009": {
@@ -512,7 +512,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC047"
+      "pdfFormCode": "047"
     },
 
     "CRV0024020": {
@@ -524,7 +524,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC048"
+      "pdfFormCode": "048"
     },
 
     "CRV0024035": {
@@ -536,7 +536,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC049"
+      "pdfFormCode": "049"
     },
 
     "CRV0024069": {
@@ -548,7 +548,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC050"
+      "pdfFormCode": "050"
     },
 
     "CRV0024042": {
@@ -560,7 +560,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC051"
+      "pdfFormCode": "051"
     },
 
     "CRV0024095": {
@@ -572,7 +572,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC052"
+      "pdfFormCode": "052"
     },
 
     "CRV0024721": {
@@ -584,7 +584,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC053"
+      "pdfFormCode": "053"
     },
 
     "CRV0024094": {
@@ -596,7 +596,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC054"
+      "pdfFormCode": "054"
     },
 
     "CRV0024093": {
@@ -608,7 +608,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC055"
+      "pdfFormCode": "055"
     },
 
     "CRV0024092": {
@@ -620,7 +620,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC056"
+      "pdfFormCode": "056"
     },
 
     "CRV0024091": {
@@ -632,7 +632,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC057"
+      "pdfFormCode": "057"
     },
 
     "CRV0024036": {
@@ -644,7 +644,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC058"
+      "pdfFormCode": "058"
     },
 
     "CRV0024090": {
@@ -656,7 +656,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC059"
+      "pdfFormCode": "059"
     },
 
     "CRV0024089": {
@@ -668,7 +668,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC060"
+      "pdfFormCode": "060"
     },
 
     "CRV0024088": {
@@ -680,7 +680,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC061"
+      "pdfFormCode": "061"
     },
 
     "CRV0024087": {
@@ -692,7 +692,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC062"
+      "pdfFormCode": "062"
     },
 
     "CRV0024086": {
@@ -704,7 +704,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC063"
+      "pdfFormCode": "063"
     }
   },
   "Electrical": {
@@ -717,7 +717,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC000"
+      "pdfFormCode": "064"
     },
     "CRV0024002E": {
       "name": "Engine Block Heater",
@@ -728,7 +728,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC000"
+      "pdfFormCode": "065"
     },
     "CRV0024003E": {
       "name": "Heated Steering Wheel (Hybrid)",
@@ -739,7 +739,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC000"
+      "pdfFormCode": "066"
     },
     "CRV0024004E": {
       "name": "Heated Steering Wheel",
@@ -750,7 +750,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC000"
+      "pdfFormCode": "067"
     },
     "CRV0024005E": {
       "name": "Parking Sensors (Hybrid)",
@@ -761,7 +761,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC000"
+      "pdfFormCode": "068"
     },
     "CRV0024006E": {
       "name": "Parking Sensors",
@@ -772,7 +772,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC000"
+      "pdfFormCode": "069"
     },
     "CRV0024007E": {
       "name": "Wireless Charger (EX, Sport)",
@@ -783,7 +783,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC000"
+      "pdfFormCode": "070"
     },
     "CRV0024008E": {
       "name": "Wireless Charger (LX)",
@@ -794,7 +794,7 @@
       "description": "",
       "needsInstalled": [],
       "cannotCombineWith": [],
-      "pdfFormCode": "AC000"
+      "pdfFormCode": "071"
     }
   }
 }
