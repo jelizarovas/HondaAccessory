@@ -1,7 +1,10 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import { MdSavings } from "react-icons/md";
 
 export const Accessories = ({ accessories, selectedAccessories, setSelectedAccessories }) => {
+  const [search, setSearch] = React.useState("");
+
   const handleCheckboxChange = (accessory, price, event) => {
     const updatedSelection = { ...selectedAccessories };
 
@@ -34,14 +37,22 @@ export const Accessories = ({ accessories, selectedAccessories, setSelectedAcces
   };
 
   return (
-    <div className="flex relative w-full lg:max-w-lg overflow-y-auto  h-screen shadow-2xl   py-2">
-      <div className="">
+    <div className="flex relative w-full  lg:max-w-lg overflow-y-auto  h-screen shadow-2xl   py-2">
+      <div className="mx-auto">
         <div className="flex flex-col  bg-white w-full px-2">
           <div className="flex justify-between items-center">
-            <span className="text-2xl py-4"> Accessories</span>
+            <div className=" flex-grow flex items-center text-2xl text-black">
+              <span>🔍</span>
+              <input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="text-2xl py-4 ring-0 outline-none w-full flex-grow px-2"
+                placeholder="Accessories"
+              />
+            </div>
             <div className="flex items-center space-x-2">
               {/* <button onClick={selectAll}>Select All</button> */}
-              <button className="hover:underline" onClick={selectNone}>
+              <button className="hover:underline whitespace-nowrap" onClick={selectNone}>
                 Select None
               </button>
             </div>
@@ -53,16 +64,18 @@ export const Accessories = ({ accessories, selectedAccessories, setSelectedAcces
             <div key={category}>
               <h4 className="bg-slate-200">{category}</h4>
               <ul>
-                {Object.entries(accessories[category]).map(([accessoryName, accessory]) => {
-                  return (
-                    <Accessory
-                      accessoryName={accessoryName}
-                      accessory={accessory}
-                      selectedAccessories={selectedAccessories}
-                      handleCheckboxChange={handleCheckboxChange}
-                    />
-                  );
-                })}
+                {Object.entries(accessories[category])
+                  .filter(([accessoryName, accessory]) => accessory.name.includes(search))
+                  .map(([accessoryName, accessory]) => {
+                    return (
+                      <Accessory
+                        accessoryName={accessoryName}
+                        accessory={accessory}
+                        selectedAccessories={selectedAccessories}
+                        handleCheckboxChange={handleCheckboxChange}
+                      />
+                    );
+                  })}
               </ul>
             </div>
           ))}

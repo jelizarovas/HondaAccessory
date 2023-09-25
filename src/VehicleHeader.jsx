@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import crv from "./data/CR-V_trims.json";
 import { ImageProccessor } from "./ImageProccessor";
 import { GetPdfButton } from "./GetPdfButton";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const direction = [2, 4, 9];
 
@@ -228,32 +229,16 @@ function ImageWithBackup({ src, backupSrc, alt }) {
   }, [src]);
 
   return (
-    // <ImageProccessor imgOld={srcs?.[1] || src} imgNew={src} />
-    // <ImageProccessor /> TURN ON FOR EFFECT - cross origin error for now!!!!!!!!!!
-    // <div
-    //   className="h-full w-full "
-    //   style={{
-    //     // backgroundImage: `url(${src}), url(${srcs?.[1] || src})`,
-    //     backgroundImage: `url(${src})`,
-    //     backgroundPosition: "center",
-    //     backgroundRepeat: "no-repeat" /* prevents the image from repeating */,
-    //     backgroundSize: "contain",
-    //     backgroundBlendMode: "lighten",
-    //   }}
-    // ></div>
-    <div className="relative lg:h-full flex items-center justify-center h-full">
-      {/* <img
-        className="absolute bg-blend-darken opacity-50 z-10"
-        src={srcs?.[1]}
-        alt={alt}
-      /> */}
-      <img src={src} alt={alt} className="lg:object-fit object-contain transition-all lg:h-full " />
-
-      {/* <div className="absolute flex flex-col">
-        <span>{src}</span>
-        <span>{srcs?.[1]}</span>
-      </div> */}
-    </div>
+    <TransformWrapper className="" centerOnInit={true}>
+      {/* <div className="relative bg-lime-400 h-full w-full"> */}
+      <TransformComponent wrapperClass="w-full h-full">
+        {/* <div className="relative lg:h-full flex items-center justify-center h-full "> */}
+        {/* <img src={src} alt={alt} className="" /> */}
+        <img src={src} alt={alt} className="lg:object-fit object-contain transition-all lg:h-full " />
+        {/* </div> */}
+      </TransformComponent>
+      {/* </div> */}
+    </TransformWrapper>
   );
 }
 
