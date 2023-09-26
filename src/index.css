@@ -99,3 +99,12 @@ path {
     fill-opacity: 0.0;
   }
 }
+
+.category-div .category-list:empty {
+  display: none;
+}
+
+.category-div:empty, 
+.category-div:has(> h4 + :empty) {
+  display: none;
+}

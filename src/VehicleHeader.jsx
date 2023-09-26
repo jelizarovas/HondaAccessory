@@ -22,6 +22,13 @@ function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
   const changeView = (event) => {
     setView(event.target.value);
   };
+
+  const cycleView = () => {
+    const currentIndex = views.findIndex(([code, _]) => code === view);
+    const nextIndex = (currentIndex + 1) % views.length;
+    setView(views[nextIndex][0]);
+  };
+
   const changeTrimLevel = (event) => {
     setTrimLevel(event.target.value);
   };
@@ -141,10 +148,24 @@ function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
 
   const imageUrl = generateCarImageUrl(view, model, exteriorColor, interiorColorCode, options);
 
+  const views = [
+    ["02", "Front"],
+    ["04", "Side"],
+    ["09", "Rear"],
+  ];
+
   return (
-    <div className="flex flex-col lg:h-screen max-h-screen w-full">
-      <div className="flex justify-between items-center text-2xl">
-        <div className="flex items-center px-6  space-x-6 py-4 uppercase ">
+    <div className="relative flex flex-col lg:h-screen max-h-screen w-full">
+      <div className="flex-grow lg:w-full">
+        <ImageWithBackup
+          // key={imageUrl}
+          src={imageUrl}
+          backupSrc="/vehicles/2024/cr-v/MY23-CR-V-trim-jelly-LX-canyon-blue-2x.avif"
+          alt={`CR-V ${trimLevel} in ${exteriorColor}`}
+        />
+      </div>
+      <div className="absolute  w-full flex justify-between items-center lg:text-2xl">
+        <div className="flex items-center px-6  space-x-6 lg:py-4 uppercase ">
           <TitleDropDown label={"2024"} />
           <TitleDropDown label={"CR-V"} />
           <TitleDropDown label={"AWD"} />
@@ -157,22 +178,10 @@ function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
           pdfName="/pdfs/CR-V2024-form.pdf"
         />
       </div>
-      <div className="flex-grow lg:w-full">
-        <ImageWithBackup
-          // key={imageUrl}
-          src={imageUrl}
-          backupSrc="/vehicles/2024/cr-v/MY23-CR-V-trim-jelly-LX-canyon-blue-2x.avif"
-          alt={`CR-V ${trimLevel} in ${exteriorColor}`}
-        />
-      </div>
-      <div>
-        <div className=" flex justify-between px-10 py-4">
-          <div id="view" className="flex space-x-2 px-2">
-            {[
-              ["02", "Front"],
-              ["04", "Side"],
-              ["09", "Rear"],
-            ].map(([code, label]) => (
+      <div className="absolute bottom-0 w-full">
+        <div className=" flex justify-between lg:px-10 lg:py-4 pb-4 px-2 text-xs max-w-full overflow-x-auto">
+          <div id="view" className="hidden space-x-2 px-2 lg:flex">
+            {views.map(([code, label]) => (
               <button
                 className={`${view === code ? "bg-indigo-100" : "bg-slate-100"} px-4 py-2 rounded-lg`}
                 key={code}
@@ -183,11 +192,14 @@ function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
               </button>
             ))}
           </div>
+          <button className={`lg:hidden block bg-indigo-100 px-4 py-1  rounded-lg`} onClick={cycleView}>
+            {views.find(([code, _]) => code === view)[1]} {">>"}
+          </button>
           <div>
             {/* <label htmlFor="exterior">Exterior: </label> */}
-            <select className="px-4 py-2 rounded-lg bg-slate-100" id="exterior" onChange={changeExterior}>
+            <select className="px-4 py-1 rounded-lg bg-slate-100 truncate" id="exterior" onChange={changeExterior}>
               {crv?.[trimLevel]?.colorOptions.map((color, i) => (
-                <option key={i} value={color.exteriorCode}>
+                <option key={i} value={color.exteriorCode} className="truncate">
                   {color.exteriorName}
                 </option>
               ))}
@@ -221,6 +233,24 @@ function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
 }
 
 function ImageWithBackup({ src, backupSrc, alt }) {
+  const transformWrapperRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (transformWrapperRef.current) {
+        const { setTransform } = transformWrapperRef.current;
+        setTransform(0, 0, 1, 0, 0);
+        // zoomTo(0, 0, 1);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   console.log("Reneder");
   const [srcs, setSrcs] = useState([src]);
 
@@ -229,7 +259,7 @@ function ImageWithBackup({ src, backupSrc, alt }) {
   }, [src]);
 
   return (
-    <TransformWrapper className="" centerOnInit={true}>
+    <TransformWrapper className="" ref={transformWrapperRef} centerOnInit={true}>
       {/* <div className="relative bg-lime-400 h-full w-full"> */}
       <TransformComponent wrapperClass="w-full h-full">
         {/* <div className="relative lg:h-full flex items-center justify-center h-full "> */}

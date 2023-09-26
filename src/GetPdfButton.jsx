@@ -6,9 +6,9 @@ export const GetPdfButton = ({ totalPrice, pdfName, accessoriesData, selectedAcc
   return (
     <button
       onClick={() => fillPDF(pdfName, accessoriesData, selectedAccessories)}
-      className="px-4 bg-indigo-400 py-2 rounded mr-2"
+      className="lg:px-4 px-2 bg-indigo-500 hover:bg-indigo-700 transition-all text-white lg:py-2 py-0.5 rounded mr-2"
     >
-      Get ${totalPrice}{" "}
+      🛒 ${totalPrice}{" "}
     </button>
   );
 };
