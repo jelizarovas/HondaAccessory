@@ -96,9 +96,10 @@ export const Accessories = ({ accessories, selectedAccessories, setSelectedAcces
               <ul className="category-list">
                 {Object.entries(accessories[category])
                   .filter(([accessoryName, accessory]) => accessory.name.toLowerCase().includes(search.toLowerCase()))
-                  .map(([accessoryName, accessory]) => {
+                  .map(([accessoryName, accessory], i) => {
                     return (
                       <Accessory
+                      key={i}
                         accessoryName={accessoryName}
                         accessory={accessory}
                         selectedAccessories={selectedAccessories}

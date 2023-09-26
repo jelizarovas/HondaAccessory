@@ -1,6 +1,7 @@
 {
   "name": "hondaaccessory",
   "homepage": "https://jelizarovas.github.io/HondaAccessory/",
+  "proxy": "http://localhost:3001",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +11,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "start": "concurrently \"vite\" \"cd server && node server.js\""
   },
   "dependencies": {
     "downloadjs": "^1.4.7",
@@ -26,6 +28,7 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.15",
+    "concurrently": "^8.2.1",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",

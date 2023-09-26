@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import crv from "./data/CR-V_trims.json";
 import { ImageProccessor } from "./ImageProccessor";
 import { GetPdfButton } from "./GetPdfButton";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
@@ -13,7 +12,7 @@ const generateCarImageUrl = (view, model, exteriorColor, interiorColor, options,
   return `https://automobiles.honda.com/platform/api/v4/images/exterior/${view}?config=${config}&width=${width}`;
 };
 
-function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
+function VehicleHeader({ vehicle, accessoriesData, selectedAccessories, totalPrice }) {
   const [trimLevel, setTrimLevel] = useState("LX");
   const [view, setView] = useState("02");
   const [exteriorColor, setExteriorColor] = useState("B-640M");
@@ -198,7 +197,7 @@ function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
           <div>
             {/* <label htmlFor="exterior">Exterior: </label> */}
             <select className="px-4 py-1 rounded-lg bg-slate-100 truncate" id="exterior" onChange={changeExterior}>
-              {crv?.[trimLevel]?.colorOptions.map((color, i) => (
+              {vehicle?.[trimLevel]?.colorOptions.map((color, i) => (
                 <option key={i} value={color.exteriorCode} className="truncate">
                   {color.exteriorName}
                 </option>
