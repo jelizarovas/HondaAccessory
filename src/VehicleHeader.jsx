@@ -12,10 +12,17 @@ const generateCarImageUrl = (view, model, exteriorColor, interiorColor, options,
   return `https://automobiles.honda.com/platform/api/v4/images/exterior/${view}?config=${config}&width=${width}`;
 };
 
-function VehicleHeader({ vehicle, accessoriesData, selectedAccessories, totalPrice }) {
-  const [trimLevel, setTrimLevel] = useState("LX");
+function VehicleHeader({
+  vehicle,
+  trimLevel = "LX",
+  setTrimLevel,
+  exteriorColor = "B-640M",
+  setExteriorColor,
+  accessoriesData,
+  selectedAccessories,
+  totalPrice,
+}) {
   const [view, setView] = useState("02");
-  const [exteriorColor, setExteriorColor] = useState("B-640M");
   const [interiorColor, setInteriorColor] = useState("BK");
 
   const changeView = (event) => {
@@ -250,7 +257,6 @@ function ImageWithBackup({ src, backupSrc, alt }) {
     };
   }, []);
 
-  console.log("Reneder");
   const [srcs, setSrcs] = useState([src]);
 
   React.useEffect(() => {

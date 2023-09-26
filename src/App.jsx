@@ -11,13 +11,15 @@ function App() {
   const { data: vehicle } = useFetchJSON("vehicles/2024/cr-v/trims.json");
 
   const [selectedAccessories, setSelectedAccessories] = React.useState({});
+  const [trimLevel, setTrimLevel] = React.useState("LX");
+  const [exteriorColor, setExteriorColor] = React.useState("B-640M");
 
   const getTotalPrice = () => {
     const total = Object.values(selectedAccessories).reduce((sum, price) => sum + price, 0);
     return total.toFixed(2);
   };
 
-  console.log(selectedAccessories);
+  // console.log(selectedAccessories);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   return (
@@ -28,6 +30,10 @@ function App() {
         accessoriesData={accessories}
         selectedAccessories={selectedAccessories}
         totalPrice={getTotalPrice()}
+        trimLevel={trimLevel}
+        setTrimLevel={setTrimLevel}
+        exteriorColor={exteriorColor}
+        setExteriorColor={setExteriorColor}
       />
       <Accessories
         accessories={accessories}

@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = 3001;
+const PUBLIC_DIR = path.join(__dirname, "..", "public");
 
 app.use(bodyParser.json());
 
@@ -31,6 +32,25 @@ app.get("/api/accessories/:year/:model", (req, res) => {
     if (err) {
       res.status(404).send("File not found");
     }
+  });
+});
+
+app.post("/api/save-trims", (req, res) => {
+  // const data = JSON.stringify(req.body, null, 2);
+  const { data, filename } = req.body;
+  const timestamp = Date.now();
+  console.log({ PUBLIC_DIR });
+  const dirPath = path.join(PUBLIC_DIR, "vehicles", "2024", "cr-v");
+  const filePath = path.join(dirPath, `trims.json`);
+
+  fs.writeFile(filePath, JSON.stringify(data, null, 2), (err) => {
+    if (err) {
+      console.error("Error writing to the file:", err);
+      res.status(500).send("Failed to update the file.");
+      return;
+    }
+
+    res.send("File saved successfully.");
   });
 });
 

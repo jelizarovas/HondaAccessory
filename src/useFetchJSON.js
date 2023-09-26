@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function useFetchJSON(path) {
+function useFetchJSON(path, shouldCache = true) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -8,7 +8,9 @@ function useFetchJSON(path) {
   const basePath = import.meta.env.BASE_URL;
 
   useEffect(() => {
-    fetch(`${basePath}${path}`)
+    const finalPath = shouldCache ? `${basePath}${path}` : `${basePath}${path}?_=${new Date().getTime()}`; // Append a timestamp to bypass cache
+
+    fetch(finalPath)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -23,7 +25,7 @@ function useFetchJSON(path) {
         setError(err);
         setLoading(false);
       });
-  }, [path]); // Dependency on 'path' ensures the fetch re-runs if path changes
+  }, [path, shouldCache]); // Dependency on 'path' and 'shouldCache' ensures the fetch re-runs if either changes
 
   return { data, loading, error };
 }
