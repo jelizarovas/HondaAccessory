@@ -6,9 +6,9 @@ export const GetPdfButton = ({ totalPrice, pdfName, accessoriesData, selectedAcc
   return (
     <button
       onClick={() => fillPDF(pdfName, accessoriesData, selectedAccessories)}
-      className="lg:px-4 px-2 bg-indigo-500 hover:bg-indigo-700 transition-all text-white lg:py-2 py-0.5 rounded mr-2"
+      className="lg:px-4 px-2 bg-indigo-500 hover:bg-indigo-700 transition-all text-white lg:py-2005%20honda%20cr-v202 py-0.5 rounded mr-2"
     >
-      🛒 ${totalPrice}{" "}
+      🛒??? ${totalPrice}{" "}
     </button>
   );
 };
@@ -18,9 +18,15 @@ const formCodeToFieldMapping = (code) => ({
 });
 
 async function fillPDF(pdfName, accessoriesData, selectedAccessories) {
-  const baseUrl = window.location.origin.toString() /*+ import.meta.env.PUBLIC_URL*/ + "/";
+  // const baseUrl = window.location.origin.toString() /*+ import.meta.env.PUBLIC_URL*/ + "/";
+  // console.log(baseUrl, import.meta.env.PUBLIC_URL, pdfName);
+  // const formUrl = baseUrl + pdfName;
+  const basePath = import.meta.env.BASE_URL;
+  console.log(import.meta.env.BASE_URL); // works in localhos
+  // const formUrl = new URL(pdfName, basePath).href;
+  const formUrl = `${basePath}${pdfName}`;
+  console.log({ pdfName, basePath, formUrl });
 
-  const formUrl = baseUrl + pdfName;
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(formPdfBytes);
   const form = pdfDoc.getForm();

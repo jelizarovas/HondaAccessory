@@ -175,7 +175,7 @@ function VehicleHeader({ accessoriesData, selectedAccessories, totalPrice }) {
           totalPrice={totalPrice}
           accessoriesData={accessoriesData}
           selectedAccessories={selectedAccessories}
-          pdfName="/pdfs/CR-V2024-form.pdf"
+          pdfName="pdfs/CR-V2024-form.pdf"
         />
       </div>
       <div className="absolute bottom-0 w-full">
