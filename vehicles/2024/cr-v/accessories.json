@@ -1,0 +1,869 @@
+{
+  "Interior": {
+    "CRV0024001I": {
+      "name": "All-Season Floor Mats",
+      "price": 270.63,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/05-Interior/MY23-CRV-BAP-modal-All-Season-Floor-Mats-2x.jpg",
+      "description": "The extended sidewalls of the high-wall **All-Season Floor Mats** add extra protection to shield your original carpets from the wear and tear of everyday driving.\nSpecially designed to trap dirt\nMade of durable, all-weather material\nEasily cleaned with mild soap and water\nCustom appearance thanks to the molded logo\nNot intended for use with other floor mats.\nAlways secure floor mats with your vehicle's floor-mat anchors.\nSome components and colors may vary. Please see your Honda dealer for details.",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "001",
+      "visual": false
+    },
+    "CRV0024002I": {
+      "name": "Auto D/N Mirror w/ Homelink (EX-L, Tour)",
+      "price": 347.5,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/05-Interior/MY23-CRV-BAP-modal-Cargo-Cover-2x.jpg",
+      "description": "The Cargo Cover keeps items in the back out of view and helps protect them from damaging UV rays.\nMade of screen-type material\nFully retractable",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "002",
+      "visual": false
+    },
+    "CRV0024003I": {
+      "name": "Cargo Cover",
+      "price": 245.63,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/05-Interior/MY23-CRV-BAP-modal-Cargo-Cover-2x.jpg",
+      "description": "The Cargo Cover keeps items in the back out of view and helps protect them from damaging UV rays.\nMade of screen-type material\nFully retractable",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "003",
+      "visual": false
+    },
+    "CRV0024004I": {
+      "name": "Cargo Net ",
+      "price": 91.88,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "004",
+      "visual": false
+    },
+    "CRV0024005I": {
+      "name": "Cargo Organizer ",
+      "price": 130.63,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "005",
+      "visual": false
+    },
+    "CRV0024006I": {
+      "name": "Cargo Tray (Hybrid)",
+      "price": 183.13,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "006",
+      "visual": false
+    },
+    "CRV0024007I": {
+      "name": "Cargo Tray ",
+      "price": 183.13,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "007",
+      "visual": false
+    },
+    "CRV0024008I": {
+      "name": "Door Sill Protection Film",
+      "price": 207.5,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "008",
+      "visual": false
+    },
+    "CRV0024009I": {
+      "name": "First Aid Kit ",
+      "price": 42.5,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "009",
+      "visual": false
+    },
+    "CRV0024010I": {
+      "name": "Illuminated Cargo Sill Trim (Hybrid) ",
+      "price": 436.25,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "010",
+      "visual": false
+    },
+    "CRV0024011I": {
+      "name": "Illuminated Cargo Sill Trim ",
+      "price": 436.25,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "011",
+      "visual": false
+    },
+    "CRV0024012I": {
+      "name": "Illuminated Door Sill(8) ",
+      "price": 715.63,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "012",
+      "visual": false
+    },
+    "CRV0024013I": {
+      "name": "Interior Illumination ",
+      "price": 443.13,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "013",
+      "visual": false
+    },
+    "CRV0024014I": {
+      "name": "Rear Passenger Window Shades ",
+      "price": 334.38,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "014",
+      "visual": false
+    },
+    "CRV0024015I": {
+      "name": "Seat Back Protector (Hybrid) ",
+      "price": 178.75,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "015",
+      "visual": false
+    },
+    "CRV0024016I": {
+      "name": "Seat Back Protector ",
+      "price": 178.75,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "016",
+      "visual": false
+    }
+  },
+  "Exterior": {
+    "CRV0024030": {
+      "name": "18-in Black Alloy Wheel",
+      "price": 2580.0,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/03-Wheels/MY23-CRV-BAP-modal-18-in-Black-Alloy-Wheel-THUMB.jpg",
+      "description": "The perfect way to add extra ruggedness to your new CR-V. Alloy wheels not only look amazing, they can help ensure the longevity of wheel bearings and suspension joints.\nWheels are stringently tested to match all Honda requirements as well as those from the Society of Automotive Engineers\nWidth-matched to fit your car precisely for proper clearance and handling\nClear-coat finish over the front of the wheels helps prevent corrosion and makes cleaning easier\nNew tires are required for some applications.",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "017",
+      "visual": true
+    },
+    "CRV0024012": {
+      "name": "18-in HPD Bronze Alloy Wheel",
+      "price": 2580.0,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/03-Wheels/MY23-CRV-BAP-modal-18-in-HPD-Bronze-Alloy-Wheel-THUMB.jpg",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "018",
+      "visual": true
+    },
+    "CRV0024004": {
+      "name": "Bike Attachment w/ Crossbars",
+      "price": 799.38,
+      "cost": 0.0,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Bike-Attachment-THUMB.jpg",
+      "description": "",
+      "needsInstalled": ["CRV0024065"],
+      "cannotCombineWith": [],
+      "pdfFormCode": "019",
+      "visual": true
+    },
+    "CRV0024070": {
+      "name": "Bike Attachment w/ Roof Rails and Crossbars",
+      "price": 1433.75,
+      "cost": 0.0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Bike-Attachment-THUMB.jpg",
+      "description": "",
+      "needsInstalled": ["CRV0024065", "CRV0024023"],
+      "cannotCombineWith": [],
+      "pdfFormCode": "020",
+      "visual": true
+    },
+    "CRV0024040": {
+      "name": "Black Emblems (H Mark - RR only, CR-V)",
+      "price": 376.88,
+      "cost": 0.0,
+      "trimsAvailable": [],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Black-Emblems-H-Mark-CR-V-2x.jpg",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "021",
+      "visual": true
+    },
+    "CRV0024056": {
+      "name": "Black Emblems (Sport)",
+      "price": 91.25,
+      "cost": 0.0,
+      "trimsAvailable": ["Sport", "Sport Touring", "Sport-L"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Black-Emblems-Sport-2x.jpg",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "022",
+      "visual": true
+    },
+    "CRV0024062": {
+      "name": "Black Emblems (Touring)",
+      "price": 83.13,
+      "cost": 0.0,
+      "trimsAvailable": ["Sport Touring"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Black-Emblems-Touring-2x.jpg",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "023",
+      "visual": true
+    },
+    "CRV0024005": {
+      "name": "Body Side Molding",
+      "price": 370.0,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Body-Side-Molding-2x.jpg",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "024",
+      "visual": true
+    },
+    "CRV0024006": {
+      "name": "Crossbars",
+      "price": 411.88,
+      "cost": 0.0,
+      "trimsAvailable": [],
+      "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Crossbars-2x.jpg",
+      "description": "",
+      "needsInstalled": ["CRV0024023"],
+      "cannotCombineWith": [],
+      "pdfFormCode": "025",
+      "visual": true
+    },
+
+    "CRV0024100": {
+      "name": "Decal Graphics, HPD",
+      "price": 151.25,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "025",
+      "visual": true
+    },
+    "CRV0024099": {
+      "name": "Door Edge Film",
+      "price": 151.25,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "026",
+      "visual": true
+    },
+    "CRV0024098": {
+      "name": "Door Edge Guard",
+      "price": 232.5,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": ["CRV0024049"],
+      "pdfFormCode": "027",
+      "visual": true
+    },
+    "CRV0024097": {
+      "name": "Door Handle Protection Film",
+      "price": 151.25,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": ["CRV0024049"],
+      "pdfFormCode": "028",
+      "visual": true
+    },
+    "CRV0024008": {
+      "name": "Door Visors",
+      "price": 359.38,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "030",
+      "visual": true
+    },
+    "CRV0024032": {
+      "name": "Emblem - HPD",
+      "price": 76.88,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "031",
+      "visual": true
+    },
+    "CRV0024033": {
+      "name": "Fender Emblems",
+      "price": 185.0,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "032",
+      "visual": true
+    },
+    "CRV0024049": {
+      "name": "Fender Flares",
+      "price": 785.0,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "033",
+      "visual": true
+    },
+    "CRV0024014": {
+      "name": "Front Lower Bumper Trim",
+      "price": 746.88,
+      "cost": 0.0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "034",
+      "visual": true
+    },
+    "CRV0024050": {
+      "name": "Hood Air Deflector",
+      "price": 340.63,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "035",
+      "visual": true
+    },
+    "CRV0024051": {
+      "name": "Kayak Attachment w/ Crossbars",
+      "price": 783.13,
+      "cost": 0.0,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "036",
+      "visual": true
+    },
+    "CRV0024066": {
+      "name": "Kayak Attachment w/ Roof Rails and Crossbars",
+      "price": 1417.5,
+      "cost": 0.0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "037",
+      "visual": true
+    },
+    "CRV0024019": {
+      "name": "Lower Door Trim Accent",
+      "price": 542.5,
+      "cost": 0.0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "038",
+      "visual": true
+    },
+    "CRV0024053": {
+      "name": "Moonroof Visor",
+      "price": 315.63,
+      "cost": 0.0,
+      "trimsAvailable": ["EX", "EX-L", "Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "039",
+      "visual": true
+    },
+    "CRV0024015": {
+      "name": "Roof Basket w/ Crossbars",
+      "price": 986.88,
+      "cost": 0.0,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "040",
+      "visual": true
+    },
+
+    "CRV0024071": {
+      "name": "Roof Basket w/ Roof Rails and Crossbars ",
+      "price": 1621.25,
+      "cost": 0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "041",
+      "visual": true
+    },
+
+    "CRV0024034": {
+      "name": "Roof Box - Short w/ Roof Rails and Crossbars ",
+      "price": 1741.25,
+      "cost": 0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "042",
+      "visual": true
+    },
+
+    "CRV0024023": {
+      "name": "Roof Rails ",
+      "price": 634.38,
+      "cost": 0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "043",
+      "visual": true
+    },
+
+    "CRV0024072": {
+      "name": "Roof Rox - Short w/ Crossbars ",
+      "price": 1106.88,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "044",
+      "visual": true
+    },
+
+    "CRV0024024": {
+      "name": "Running Board ",
+      "price": 1040.63,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "045",
+      "visual": true
+    },
+
+    "CRV0024067": {
+      "name": "Ski Attachment w/ Crossbars ",
+      "price": 779.69,
+      "cost": 0,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "046",
+      "visual": true
+    },
+
+    "CRV0024009": {
+      "name": "Ski Attachment w/ Roof Rails and Crossbars ",
+      "price": 1414.06,
+      "cost": 0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "047",
+      "visual": true
+    },
+
+    "CRV0024020": {
+      "name": "Splash Guard Set",
+      "price": 245.0,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "048",
+      "visual": true
+    },
+
+    "CRV0024035": {
+      "name": "Surboard Attachment w/ Crossbars ",
+      "price": 664.38,
+      "cost": 0,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "049",
+      "visual": true
+    },
+
+    "CRV0024069": {
+      "name": "Surfboard Attachment w/ Roof Rails and Crossbars ",
+      "price": 1298.75,
+      "cost": 0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "050",
+      "visual": true
+    },
+
+    "CRV0024042": {
+      "name": "Tailgate Spoiler ",
+      "price": 542.5,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "051",
+      "visual": true
+    },
+
+    "CRV0024095": {
+      "name": "Tent ",
+      "price": 510.0,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "052",
+      "visual": true
+    },
+
+    "CRV0024721": {
+      "name": "Trailer Hitch (Touring) ",
+      "price": 993.13,
+      "cost": 0,
+      "trimsAvailable": ["Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "053",
+      "visual": true
+    },
+
+    "CRV0024094": {
+      "name": "Trailer Hitch Ball - 1 7/8-in ",
+      "price": 21.25,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "054",
+      "visual": true
+    },
+
+    "CRV0024093": {
+      "name": "Trailer Hitch Ball - 2-in ",
+      "price": 21.25,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "055",
+      "visual": true
+    },
+
+    "CRV0024092": {
+      "name": "Trailer Hitch Harness ",
+      "price": 412.5,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "056",
+      "visual": true
+    },
+
+    "CRV0024091": {
+      "name": "Trailer Hitch HFA Adapter (Touring) ",
+      "price": 270.63,
+      "cost": 0,
+      "trimsAvailable": ["Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "057",
+      "visual": true
+    },
+
+    "CRV0024036": {
+      "name": "Trailer Hitch ",
+      "price": 722.5,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "058",
+      "visual": true
+    },
+
+    "CRV0024090": {
+      "name": "Valve Stem Cap H-Mark, Black ",
+      "price": 49.38,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "059",
+      "visual": true
+    },
+
+    "CRV0024089": {
+      "name": "Valve Stem Cap H-Mark, Chrome ",
+      "price": 49.38,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "060",
+      "visual": true
+    },
+
+    "CRV0024088": {
+      "name": "Wheel Lock Nut Black ",
+      "price": 156.25,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "061",
+      "visual": true
+    },
+
+    "CRV0024087": {
+      "name": "Wheel Lock Nut Chrome ",
+      "price": 120.0,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "062",
+      "visual": true
+    },
+
+    "CRV0024086": {
+      "name": "Wheel Lug Nuts Set, Black (20 qty) ",
+      "price": 320.0,
+      "cost": 0,
+      "trimsAvailable": ["All"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "063"
+    }
+  },
+  "Electrical": {
+    "CRV0024001E": {
+      "name": "Engine Block Heater (Hybrid)",
+      "price": 421.88,
+      "cost": 0,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "064",
+      "visual": true
+    },
+    "CRV0024002E": {
+      "name": "Engine Block Heater",
+      "price": 403.75,
+      "cost": 0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "065",
+      "visual": true
+    },
+    "CRV0024003E": {
+      "name": "Heated Steering Wheel (Hybrid)",
+      "price": 1214.38,
+      "cost": 0,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "066",
+      "visual": true
+    },
+    "CRV0024004E": {
+      "name": "Heated Steering Wheel",
+      "price": 1214.38,
+      "cost": 0,
+      "trimsAvailable": ["LX", "EX", "EX-L", "Sport", "Sport-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "067",
+      "visual": true
+    },
+    "CRV0024005E": {
+      "name": "Parking Sensors (Hybrid)",
+      "price": 1850.0,
+      "cost": 0,
+      "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "068",
+      "visual": true
+    },
+    "CRV0024006E": {
+      "name": "Parking Sensors",
+      "price": 1850.0,
+      "cost": 0,
+      "trimsAvailable": ["LX", "EX", "EX-L"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "069",
+      "visual": true
+    },
+    "CRV0024007E": {
+      "name": "Wireless Charger (EX, Sport)",
+      "price": 685.0,
+      "cost": 0,
+      "trimsAvailable": ["EX", "Sport"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "070",
+      "visual": true
+    },
+    "CRV0024008E": {
+      "name": "Wireless Charger (LX)",
+      "price": 643.75,
+      "cost": 0,
+      "trimsAvailable": ["LX"],
+      "image": "",
+      "description": "",
+      "needsInstalled": [],
+      "cannotCombineWith": [],
+      "pdfFormCode": "071"
+    }
+  }
+}
