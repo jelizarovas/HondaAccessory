@@ -259,9 +259,9 @@ function ImageWithBackup({ src, backupSrc, alt }) {
   }, [src]);
 
   return (
-    <TransformWrapper className="" ref={transformWrapperRef} centerOnInit={true}>
+    <TransformWrapper className="fullSizeProd w-full h-full" ref={transformWrapperRef} centerOnInit={true}>
       {/* <div className="relative bg-lime-400 h-full w-full"> */}
-      <TransformComponent wrapperClass="w-full h-full">
+      <TransformComponent wrapperClass="fullSizeProd w-full h-full" contentClass="fullSizeProd w-full h-full">
         {/* <div className="relative lg:h-full flex items-center justify-center h-full "> */}
         {/* <img src={src} alt={alt} className="" /> */}
         <img src={src} alt={alt} className="lg:object-fit object-contain transition-all lg:h-full " />

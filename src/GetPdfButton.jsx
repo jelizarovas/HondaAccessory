@@ -8,7 +8,7 @@ export const GetPdfButton = ({ totalPrice, pdfName, accessoriesData, selectedAcc
       onClick={() => fillPDF(pdfName, accessoriesData, selectedAccessories)}
       className="lg:px-4 px-2 bg-indigo-500 hover:bg-indigo-700 transition-all text-white lg:py-2005%20honda%20cr-v202 py-0.5 rounded mr-2"
     >
-      🛒??? ${totalPrice}{" "}
+      🛒 ${totalPrice}{" "}
     </button>
   );
 };
