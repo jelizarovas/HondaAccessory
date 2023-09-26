@@ -7,8 +7,8 @@ import { ImageProccessor } from "./ImageProccessor";
 import useFetchJSON from "./useFetchJSON";
 
 function App() {
-  const { data: accessories, loading, error } = useFetchJSON("/vehicles/2024/cr-v/accessories.json");
-  const { data: vehicle } = useFetchJSON("/vehicles/2024/cr-v/trims.json");
+  const { data: accessories, loading, error } = useFetchJSON("vehicles/2024/cr-v/accessories.json");
+  const { data: vehicle } = useFetchJSON("vehicles/2024/cr-v/trims.json");
 
   const [selectedAccessories, setSelectedAccessories] = React.useState({});
 

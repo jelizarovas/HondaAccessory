@@ -5,8 +5,10 @@ function useFetchJSON(path) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const basePath = import.meta.env.BASE_URL;
+
   useEffect(() => {
-    fetch(path)
+    fetch(`${basePath}${path}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
