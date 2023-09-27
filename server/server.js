@@ -41,7 +41,7 @@ app.post("/api/save-trims", (req, res) => {
   const timestamp = Date.now();
   console.log({ PUBLIC_DIR });
   const dirPath = path.join(PUBLIC_DIR, "vehicles", "2024", "cr-v");
-  const filePath = path.join(dirPath, `trims.json`);
+  const filePath = path.join(dirPath, `trims ${timestamp}.json`);
 
   fs.writeFile(filePath, JSON.stringify(data, null, 2), (err) => {
     if (err) {

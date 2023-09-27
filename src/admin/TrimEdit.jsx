@@ -3,9 +3,11 @@ import useEditableJSON from "../useEditableJSON";
 
 function TrimEdit() {
   const { originalData, editedData, isModified, loading, error, onChange } = useEditableJSON(
-    "vehicles/2024/cr-v/accessories.json"
+    "vehicles/2024/cr-v/trims.json"
   );
   const [savedStatus, setSavedStatus] = useState("");
+
+  //   const availableTrims = ["All", ...getAvailableTrims(originalData)];
   //   const [inputName, setInputName] = useState("LX.colorOptions[2].exteriorName");
 
   const handleSave = async () => {
@@ -27,22 +29,19 @@ function TrimEdit() {
 
   if (loading) return <div>Loading...</div>;
 
-  const handleValueChange = (path, value) => {
-    console.log(value, path);
-    // Similar to the setIn function to update nested properties
-    // Implement logic to set the value at the specific path in jsonData
-  };
-
   const handleKeyChange = (path, newKey) => {
     // Logic to change a key at the specific path in jsonData
   };
   const paddingConstant = 10; // Adjust as needed
+
   const renderArray = (arr, path, depth) => (
     <div style={{ paddingLeft: `${depth * paddingConstant}px` }}>
       {arr.map((item, index) => (
-        <div key={index}>{renderJSON(item, `${path}[${index}]`, depth + 1)}</div>
+        <div className=" flex" key={index}>
+          {renderJSON(item, `${path}[${index}]`, depth + 1)}
+        </div>
       ))}
-      <button>+ Add to {path}</button>
+      {/* <button>+ Add to {path}</button> */}
       {/* Button to add a new item to the array */}
     </div>
   );
@@ -50,46 +49,56 @@ function TrimEdit() {
   const renderObject = (obj, path, depth) => (
     <div style={{ paddingLeft: `${depth * paddingConstant}px` }}>
       {Object.entries(obj).map(([key, value]) => (
-        <div key={key}>
-          <input type="text" value={key} onChange={(e) => handleKeyChange(`${path}.${key}`, e.target.value)} />:{" "}
-          {renderJSON(value, `${path}.${key}`, depth + 1)}
+        <div key={key} className="flex justify-start   hover:bg-indigo-200 hover:bg-opacity-20">
+          <KeyComponent value={key} />
+
+          {renderJSON(value, `${path}.${key}`, depth + 1, key)}
         </div>
       ))}
-      <button>+ Add to {path}</button>
+      {/* <button>+ Add to {path}</button> */}
 
       {/* Button to add a new key-value pair to the object */}
+    </div>
+  );
+
+  const renderColorOptions = (arr, path, depth) => (
+    <div>
+      {arr.map((color) => (
+        <ColorOptions color={color} />
+      ))}
+      <button type="butoon" onClick={() => console.log(obj)}>
+        COLORS
+      </button>
     </div>
   );
 
   const renderPrimitive = (value, path, depth) => {
     if (typeof value === "boolean") {
       return (
-        <div style={{ paddingLeft: depth * paddingConstant }}>
-          <input type="checkbox" checked={value} onChange={(e) => handlePrimitiveChange(path, e.target.checked)} />
-        </div>
+        // <div style={{ paddingLeft: depth * paddingConstant }}>
+        <input type="checkbox" name={removeLeadingDot(path)} checked={value} onChange={onChange} />
+        // </div>
       );
     } else {
       return (
-        <div style={{ paddingLeft: depth * paddingConstant }}>
-          <label htmlFor={path} className="flex flex-col">
-            {path}
-            <input
-              type="text"
-              className="border w-1/2"
-              name={removeLeadingDot(path)}
-              value={value}
-              onChange={(e) => {
-                console.log({ name: e.target.name, value: e.target.value });
-                onChange(e);
-              }}
-            />
-          </label>
-        </div>
+        // <div style={{ paddingLeft: depth * paddingConstant }}>
+        <label htmlFor={path} className="flex flex-col">
+          {/* <span> {path}</span> */}
+          <input
+            type="text"
+            className="border w-46 mx-1"
+            name={removeLeadingDot(path)}
+            value={value}
+            onChange={onChange}
+          />
+        </label>
+        // </div>
       );
     }
   };
 
-  const renderJSON = (data, path = "", depth = 0) => {
+  const renderJSON = (data, path = "", depth = 0, key) => {
+    if (key && key === "colorOptions") return renderColorOptions(data, path, depth);
     if (Array.isArray(data)) {
       return renderArray(data, path, depth);
     } else if (typeof data === "object" && data !== null) {
@@ -97,32 +106,10 @@ function TrimEdit() {
     } else {
       return renderPrimitive(data, path, depth);
     }
-    //   const newPath = (subPath) => (path ? `${path}.${subPath}` : subPath);
-
-    // if (Array.isArray(data)) return renderArray(data, path, depth);
-    // else if (typeof data === "object") return renderObject(data, path, depth);
-    // else if (typeof data === "string") {
-    //   // console.log(path, data)
-    //   return (
-    //     <input
-    //       type="text"
-    //       className="border w-1/2"
-    //       name={path}
-    //       value={data}
-    //       onChange={(e) => {
-    //         console.log({ name: e.target.name, value: e.target.value });
-    //         onChange(e);
-    //       }}
-    //     />
-    //   );
-    // } else if (typeof data === "boolean") {
-    //   return <input type="checkbox" checked={data} onChange={(e) => handleValueChange(path, e.target.checked)} />;
-    // }
-    // // Handle other data types if needed
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col text-xs">
       {/* <input type="text" onChange={(e) => setInputName(e.target.value)} value={inputName} />
       {editedData && (
         <input
@@ -137,7 +124,10 @@ function TrimEdit() {
       {editedData && (
         <>
           {/* <pre>{JSON.stringify(editedData, null, 2)}</pre> */}
-          <div>{renderJSON(editedData)}</div>;<button onClick={handleSave}>Save Data</button>
+          <div>{renderJSON(editedData)}</div>
+          <button onClick={handleSave} className="bg-green-500 py-2 px-4 max-w-xs ">
+            Save Data
+          </button>
           {savedStatus && <p>{savedStatus}</p>}
         </>
       )}
@@ -174,3 +164,47 @@ function parseInputStringToObject(data, path) {
 
   return temp || "";
 }
+
+const KeyComponent = ({ value, ...props }) => {
+  return (
+    <div className="group w-32 ">
+      <span>{camelToTitleCase(value)}</span>
+    </div>
+  );
+};
+
+function camelToTitleCase(str) {
+  return (
+    str
+      // Insert a space before all caps
+      .replace(/([a-z])([A-Z])/g, "$1 $2")
+      // Uppercase the first character
+      .replace(/^./, (char) => char.toUpperCase())
+  );
+}
+
+// function getAvailableTrims(data) {
+//   return Object.keys(data);
+// }
+
+const ColorOptions = ({ color }) => {
+  return (
+    <div>
+      <input type="text" className="w-48 border p-1 rounded " value={color?.exteriorName || ""} />
+      <input type="text" className="w-16 border p-1 rounded " value={color?.exteriorCode || ""} />
+      <div>
+        <InteriorColor colors={color?.interior} />
+      </div>
+    </div>
+  );
+};
+
+const InteriorColor = ({ colors }) => {
+  return (
+    <div>
+      {colors.map((color) => (
+        <div>{`${color.name} ${color.type} (${color.code})`}</div>
+      ))}
+    </div>
+  );
+};

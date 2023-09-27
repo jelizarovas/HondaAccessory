@@ -18,7 +18,7 @@ function reducer(state, action) {
       };
     case "EDIT":
       const updatedData = setIn(state.editedData, action.payload.path, action.payload.value);
-      console.log({ updatedData });
+      // console.log({ updatedData });
       return {
         ...state,
         editedData: updatedData,
@@ -77,7 +77,6 @@ export default function useEditableJSON(path) {
   const onChange = useCallback((e) => {
     const { name, type, checked } = e.target;
     const value = type === "checkbox" ? checked : e.target.value;
-    console.log({ value, name });
     dispatch({ type: "EDIT", payload: { path: name, value } });
   }, []);
 
