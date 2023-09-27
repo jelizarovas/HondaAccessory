@@ -1,0 +1,66 @@
+{
+  "exterior": {
+    "crbm": {
+      "name": "Canyon River Blue Metallic",
+      "code": "B-640M",
+      "hex": "#18192d"
+    },
+    "cbp": {
+      "name": "Crystal Black Pearl",
+      "code": "NH-731P",
+      "hex": "#000"
+    },
+    "lsm": {
+      "name": "Lunar Silver Metallic",
+      "code": "NH-830M",
+      "hex": "#bbb"
+    },
+    "mgm": {
+      "name": "Meteorite Gray Metallic",
+      "code": "NH-904M",
+      "hex": "#444"
+    },
+    "pwp": {
+      "name": "Platinum White Pearl",
+      "code": "NH-883P",
+      "hex": "#FFF"
+    },
+    "rrm": {
+      "name": "Radiant Red Metallic",
+      "code": "R-569M",
+      "hex": "#f00"
+    },
+    "snp": {
+      "name": "Still Night Pearl",
+      "code": "B-575P",
+      "hex": "#00f"
+    },
+    "ugp": {
+      "name": "Urban Gray Pearl",
+      "code": "NH-912P",
+      "hex": "#CCC"
+    }
+  },
+  "interior": {
+    "gc": {
+      "name": "Gray",
+      "type": "Cloth",
+      "code": "GK"
+    },
+    "bc": {
+      "name": "Black",
+      "type": "Cloth",
+      "code": "BK"
+    },
+    "gl": {
+      "name": "Gray",
+      "type": "Leather",
+      "code": "GL"
+    },
+    "bl": {
+      "name": "Black",
+      "type": "Leather",
+      "code": "BL"
+    }
+  }
+}

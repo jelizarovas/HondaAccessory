@@ -2,103 +2,79 @@
   "LX": {
     "trimCode": "RS3H2REW",
     "colorOptions": [
-      {
-        "exteriorName": "Canyon River Blue Metallic",
-        "exteriorCode": "B-640M",
-        "interior": [
-          {
-            "name": "Black",
-            "type": "Cloth",
-            "code": "BK"
-          }
-        ]
-      },
-      {
-        "exteriorName": "Crystal Black Pearl",
-        "exteriorCode": "NH-731P",
-        "interior": [
-          {
-            "name": "Black",
-            "type": "Cloth",
-            "code": "BK"
-          }
-        ]
-      },
-      {
-        "exteriorName": "Lunar Silver Metallic",
-        "exteriorCode": "NH-830M",
-        "interior": [
-          {
-            "name": "Black",
-            "type": "Cloth",
-            "code": "BK"
-          }
-        ]
-      },
-      {
-        "exteriorName": "Meteorite Gray Metallic",
-        "exteriorCode": "NH-904M",
-        "interior": [
-          {
-            "name": "Black",
-            "type": "Cloth",
-            "code": "BK"
-          }
-        ]
-      },
-      {
-        "exteriorName": "Platinum White Pearl",
-        "exteriorCode": "NH-883P",
-        "interior": [
-          {
-            "name": "Gray",
-            "type": "Cloth",
-            "code": "BK"
-          }
-        ]
-      },
-      {
-        "exteriorName": "Radiant Red Metallic",
-        "exteriorCode": "R-569M",
-        "interior": [
-          {
-            "name": "Gray",
-            "type": "Cloth",
-            "code": "BK"
-          }
-        ]
-      },
-      {
-        "exteriorName": "Still Night Pearl",
-        "exteriorCode": "B-575P",
-        "interior": [
-          {
-            "name": "Black",
-            "type": "Cloth",
-            "code": "BK"
-          }
-        ]
-      },
-      {
-        "exteriorName": "Urban Gray Pearl",
-        "exteriorCode": "NH-912P",
-        "interior": [
-          {
-            "name": "Black",
-            "type": "Cloth",
-            "code": "BK"
-          }
-        ]
-      }
-    ],
-    "accessories": {
-      "disabled": [],
-      "groups": []
-    }
+      { "crbm": ["bc"] },
+      { "cbp": ["bc"] },
+      { "lsm": ["bc"] },
+      { "mgm": ["bc"] },
+      { "pwp": ["gc"] },
+      { "rrm": ["gc"] },
+      { "snp": ["bc"] },
+      { "ugp": ["bc"] }
+    ]
   },
-  "EX": {},
-  "EX-L": {},
-  "Sport Hybrid": {},
-  "Sport-L Hybrid": {},
-  "Sport Touring": {}
+  "EX": {
+    "trimCode": "RS3H4RJW",
+    "colorOptions": [
+      { "crbm": ["bc"] },
+      { "cbp": ["bc", "gc"] },
+      { "lsm": ["bc"] },
+      { "mgm": ["bc", "gc"] },
+      { "pwp": ["bc", "gc"] },
+      { "rrm": ["gc"] },
+      { "snp": ["bc"] },
+      { "ugp": ["bc"] }
+    ]
+  },
+  "EX-L": {
+    "trimCode": "RS3H7RJW",
+    "colorOptions": [
+      { "crbm": ["bl"] },
+      { "cbp": ["bl", "gl"] },
+      { "lsm": ["bl"] },
+      { "mgm": ["bl", "gl"] },
+      { "pwp": ["bl", "gl"] },
+      { "rrm": ["gl"] },
+      { "snp": ["bl"] },
+      { "ugp": ["bl"] }
+    ]
+  },
+  "Sport Hybrid": {
+    "trimCode": "RS5H5RJXW",
+    "colorOptions": [
+      { "crbm": ["bc"] },
+      { "cbp": ["bc"] },
+      { "lsm": ["bc"] },
+      { "mgm": ["bc"] },
+      { "pwp": ["bc"] },
+      { "rrm": ["bc"] },
+      { "snp": ["bc"] },
+      { "ugp": ["bc"] }
+    ]
+  },
+  "Sport-L Hybrid": {
+    "trimCode": "RS5H8RJXW",
+    "colorOptions": [
+      { "crbm": ["bl"] },
+      { "cbp": ["bl"] },
+      { "lsm": ["bl"] },
+      { "mgm": ["bl"] },
+      { "pwp": ["gl"] },
+      { "rrm": ["bl"] },
+      { "snp": ["bl"] },
+      { "ugp": ["bl"] }
+    ]
+  },
+  "Sport Touring": {
+    "trimCode": "RS6H9RKXW",
+    "colorOptions": [
+      { "crbm": ["bl"] },
+      { "cbp": ["bl", "gl"] },
+      { "lsm": ["bl"] },
+      { "mgm": ["bl", "gl"] },
+      { "pwp": ["bl", "gl"] },
+      { "rrm": ["bl"] },
+      { "snp": ["bl"] },
+      { "ugp": ["bl"] }
+    ]
+  }
 }

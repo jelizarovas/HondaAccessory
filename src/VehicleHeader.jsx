@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ImageProccessor } from "./ImageProccessor";
 import { GetPdfButton } from "./GetPdfButton";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import useFetchJSON from "./useFetchJSON";
 
 const direction = [2, 4, 9];
 
@@ -21,9 +22,12 @@ function VehicleHeader({
   accessoriesData,
   selectedAccessories,
   totalPrice,
+  availableTrims,
 }) {
   const [view, setView] = useState("02");
   const [interiorColor, setInteriorColor] = useState("BK");
+
+  const { data: colors, loading, error } = useFetchJSON("vehicles/2024/cr-v/colors.json");
 
   const changeView = (event) => {
     setView(event.target.value);
@@ -159,7 +163,7 @@ function VehicleHeader({
     ["04", "Side"],
     ["09", "Rear"],
   ];
-
+  console.log({ availableTrims });
   return (
     <div className="relative flex flex-col lg:h-screen max-h-screen w-full">
       <div className="flex-grow lg:w-full">
@@ -175,7 +179,14 @@ function VehicleHeader({
           <TitleDropDown label={"2024"} />
           <TitleDropDown label={"CR-V"} />
           <TitleDropDown label={"AWD"} />
-          <TitleDropDown label={"LX"} />
+          <TitleDropDown label={trimLevel} />
+          <select onChange={changeTrimLevel}>
+            {availableTrims.map((trim, i) => (
+              <option key={i} value={trim}>
+                {trim}
+              </option>
+            ))}
+          </select>
         </div>
         <GetPdfButton
           totalPrice={totalPrice}
@@ -204,11 +215,20 @@ function VehicleHeader({
           <div>
             {/* <label htmlFor="exterior">Exterior: </label> */}
             <select className="px-4 py-1 rounded-lg bg-slate-100 truncate" id="exterior" onChange={changeExterior}>
-              {vehicle?.[trimLevel]?.colorOptions.map((color, i) => (
-                <option key={i} value={color.exteriorCode} className="truncate">
-                  {color.exteriorName}
-                </option>
-              ))}
+              {vehicle?.[trimLevel]?.colorOptions.map((color, i) => {
+                const [exteriorId, interiorIds] = Object.entries(color)[0];
+
+                return (
+                  <option
+                    key={i}
+                    value={colors?.exterior?.[exteriorId]?.code}
+                    style={{ backgroundColor: colors?.exterior?.[exteriorId]?.hex }}
+                    className="truncate"
+                  >
+                    {colors?.exterior?.[exteriorId]?.name}
+                  </option>
+                );
+              })}
             </select>
           </div>
           {/* <label htmlFor="trim-level">Trim: </label>

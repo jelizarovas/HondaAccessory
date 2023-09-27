@@ -192,6 +192,7 @@ const ColorOptions = ({ color }) => {
     <div>
       <input type="text" className="w-48 border p-1 rounded " value={color?.exteriorName || ""} />
       <input type="text" className="w-16 border p-1 rounded " value={color?.exteriorCode || ""} />
+      <input type="text" className="w-16 border p-1 rounded " value="FFF000" />
       <div>
         <InteriorColor colors={color?.interior} />
       </div>
