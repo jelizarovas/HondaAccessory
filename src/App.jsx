@@ -5,14 +5,32 @@ import VehicleHeader from "./VehicleHeader";
 
 import { ImageProccessor } from "./ImageProccessor";
 import useFetchJSON from "./useFetchJSON";
+import useQueryParams from "./useQueryParams";
 
 function App() {
   const { data: accessories, loading, error } = useFetchJSON("vehicles/2024/cr-v/accessories.json");
   const { data: vehicle } = useFetchJSON("vehicles/2024/cr-v/trims.json");
 
+  const { getParam, setParam, removeParam } = useQueryParams();
+
+  console.log("initial", getParam("trimLevel"), getParam("exteriorColor"));
   const [selectedAccessories, setSelectedAccessories] = React.useState({});
-  const [trimLevel, setTrimLevel] = React.useState("LX,RS3H2REW");
-  const [exteriorColor, setExteriorColor] = React.useState("B-640M");
+  const [trimLevel, setTrimLevel] = React.useState(getParam("trimLevel") || "LX,RS3H2REW");
+  const [exteriorColor, setExteriorColor] = React.useState(getParam("exteriorColor") || "B-640M");
+
+  React.useEffect(() => {
+    console.log(trimLevel, exteriorColor);
+    if (getParam("trimLevel") !== trimLevel) setParam("trimLevel", trimLevel);
+    if (getParam("exteriorColor") !== exteriorColor) setParam("exteriorColor", exteriorColor);
+  }, [trimLevel, exteriorColor]);
+
+  // React.useEffect(() => {
+
+  //     setParam("trimLevel", trimLevel);
+  //     setParam("exteriorColor", exteriorColor);
+
+  // }, [trimLevel, exteriorColor, setParam,]);
+
   let availableTrims = [];
   if (vehicle) availableTrims = Object.entries(vehicle).map(([name, value]) => [name, value.trimCode]);
 

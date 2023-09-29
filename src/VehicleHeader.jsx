@@ -17,7 +17,7 @@ function VehicleHeader({
   vehicle,
   trimLevel,
   setTrimLevel,
-  exteriorColor = "B-640M",
+  exteriorColor,
   setExteriorColor,
   accessoriesData,
   selectedAccessories,
@@ -177,7 +177,7 @@ function VehicleHeader({
           <TitleDropDown label={"CR-V"} />
           <TitleDropDown label={"AWD"} />
           {/* <TitleDropDown label={trimLevel} /> */}
-          <select onChange={changeTrimLevel}>
+          <select value={trimLevel} onChange={changeTrimLevel}>
             {availableTrims.map((trim, i) => (
               <option key={i} value={trim}>
                 {trim[0]}
@@ -211,7 +211,7 @@ function VehicleHeader({
           </button>
           <div>
             {/* <label htmlFor="exterior">Exterior: </label> */}
-            <select className="px-4 py-1 rounded-lg bg-slate-100 truncate" id="exterior" onChange={changeExterior}>
+            <select className="px-4 py-1 rounded-lg bg-slate-100 truncate" id="exterior" onChange={changeExterior} value={exteriorColor}>
               {vehicle?.[trimLevel.split(",")[0]]?.colorOptions.map((color, i) => {
                 const [exteriorId, interiorIds] = Object.entries(color)[0];
 
