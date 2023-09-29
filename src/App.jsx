@@ -11,10 +11,10 @@ function App() {
   const { data: vehicle } = useFetchJSON("vehicles/2024/cr-v/trims.json");
 
   const [selectedAccessories, setSelectedAccessories] = React.useState({});
-  const [trimLevel, setTrimLevel] = React.useState("LX");
+  const [trimLevel, setTrimLevel] = React.useState("LX,RS3H2REW");
   const [exteriorColor, setExteriorColor] = React.useState("B-640M");
   let availableTrims = [];
-  if (vehicle) availableTrims = Object.keys(vehicle);
+  if (vehicle) availableTrims = Object.entries(vehicle).map(([name, value]) => [name, value.trimCode]);
 
   const getTotalPrice = () => {
     const total = Object.values(selectedAccessories).reduce((sum, price) => sum + price, 0);

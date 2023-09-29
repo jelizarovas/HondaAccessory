@@ -15,7 +15,7 @@ const generateCarImageUrl = (view, model, exteriorColor, interiorColor, options,
 
 function VehicleHeader({
   vehicle,
-  trimLevel = "LX",
+  trimLevel,
   setTrimLevel,
   exteriorColor = "B-640M",
   setExteriorColor,
@@ -28,7 +28,6 @@ function VehicleHeader({
   const [interiorColor, setInteriorColor] = useState("BK");
 
   const { data: colors, loading, error } = useFetchJSON("vehicles/2024/cr-v/colors.json");
-
   const changeView = (event) => {
     setView(event.target.value);
   };
@@ -155,15 +154,13 @@ function VehicleHeader({
     // "CRV0024098", //Door Edge Guard
     // "CRV0024099", //Door Edge Film
   ];
-
-  const imageUrl = generateCarImageUrl(view, model, exteriorColor, interiorColorCode, options);
+  const imageUrl = generateCarImageUrl(view, trimLevel.split(",")[1], exteriorColor, interiorColorCode, options);
 
   const views = [
     ["02", "Front"],
     ["04", "Side"],
     ["09", "Rear"],
   ];
-  console.log({ availableTrims });
   return (
     <div className="relative flex flex-col lg:h-screen max-h-screen w-full">
       <div className="flex-grow lg:w-full">
@@ -179,11 +176,11 @@ function VehicleHeader({
           <TitleDropDown label={"2024"} />
           <TitleDropDown label={"CR-V"} />
           <TitleDropDown label={"AWD"} />
-          <TitleDropDown label={trimLevel} />
+          {/* <TitleDropDown label={trimLevel} /> */}
           <select onChange={changeTrimLevel}>
             {availableTrims.map((trim, i) => (
               <option key={i} value={trim}>
-                {trim}
+                {trim[0]}
               </option>
             ))}
           </select>
@@ -215,7 +212,7 @@ function VehicleHeader({
           <div>
             {/* <label htmlFor="exterior">Exterior: </label> */}
             <select className="px-4 py-1 rounded-lg bg-slate-100 truncate" id="exterior" onChange={changeExterior}>
-              {vehicle?.[trimLevel]?.colorOptions.map((color, i) => {
+              {vehicle?.[trimLevel.split(",")[0]]?.colorOptions.map((color, i) => {
                 const [exteriorId, interiorIds] = Object.entries(color)[0];
 
                 return (
