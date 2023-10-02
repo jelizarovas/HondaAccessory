@@ -18,14 +18,15 @@ const formCodeToFieldMapping = (code) => ({
 });
 
 async function fillPDF(pdfName, accessoriesData, selectedAccessories) {
+  // console.log({ selectedAccessories, accessoriesData });
   // const baseUrl = window.location.origin.toString() /*+ import.meta.env.PUBLIC_URL*/ + "/";
   // console.log(baseUrl, import.meta.env.PUBLIC_URL, pdfName);
   // const formUrl = baseUrl + pdfName;
   const basePath = import.meta.env.BASE_URL;
-  console.log(import.meta.env.BASE_URL); // works in localhos
+  // console.log(import.meta.env.BASE_URL); // works in localhos
   // const formUrl = new URL(pdfName, basePath).href;
   const formUrl = `${basePath}${pdfName}`;
-  console.log({ pdfName, basePath, formUrl });
+  // console.log({ pdfName, basePath, formUrl });
 
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(formPdfBytes);
