@@ -1,8 +1,15 @@
-# React + Vite
+#Honda Accessory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Link](https://jelizarovas.github.io/HondaAccessory/#/?trimLevel=LX%2CRS3H2REW&exteriorColor=B-640M)
 
-Currently, two official plugins are available:
+You can start just in front end mode
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+npm run dev
+```
+
+Or with admin panel
+
+```
+npm run start
+```

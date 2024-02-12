@@ -1,0 +1,71 @@
+{
+  "exterior": {
+    "dsbp": {
+      "name": "Diffused Sky Blue Pearl",
+      "code": "B-638P",
+      "hex": "#7894cf"
+    },
+    "cbp": {
+      "name": "Crystal Black Pearl",
+      "code": "NH-731P",
+      "hex": "#000"
+    },
+    "ssm": {
+      "name": "Solar Silver Metallic",
+      "code": "NH-932M",
+      "hex": "#bbb"
+    },
+    "msm": {
+      "name": "Modern Steel Metallic",
+      "code": "NH-797M",
+      "hex": "#444"
+    },
+    "pwp": {
+      "name": "Platinum White Pearl",
+      "code": "NH-883P",
+      "hex": "#FFF"
+    },
+    "rrmt": {
+      "name": "Radiant Red Metallic II",
+      "code": "R-580M",
+      "hex": "#f00"
+    },
+    "sgp": {
+      "name": "Sonic Gray Pearl",
+      "code": "NH-877P",
+      "hex": "#CCC"
+    }
+  },
+  "interior": {
+    "gl": {
+      "name": "Gray",
+      "type": "Leather",
+      "code": "gK"
+    },
+    "bc": {
+      "name": "Black",
+      "type": "Cloth",
+      "code": "BK"
+    },
+    "brl": {
+      "name": "Brown",
+      "type": "Leather",
+      "code": "BRL"
+    },
+    "bl": {
+      "name": "Black",
+      "type": "Leather",
+      "code": "BL"
+    },
+    "blo": {
+      "name": "Black Leather w/Orange Stitching",
+      "type": "Leather",
+      "code": "BLO"
+    },
+    "blr": {
+      "name": "Black Leather w/Red Stitching",
+      "type": "Leather",
+      "code": "BLR"
+    }
+  }
+}
