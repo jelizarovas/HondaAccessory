@@ -8,7 +8,7 @@ import { ClientView } from "./ClientView.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
-    <Route exact path="/:admin" component={TrimEdit} />
+    <Route exact path="/admin" component={TrimEdit} />
     <Route exact path="/" component={App} />
     <Route exact path="/c/" component={ClientView} />
   </Router>

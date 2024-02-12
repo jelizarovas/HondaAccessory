@@ -104,7 +104,7 @@
     },
     "CRV0024010I": {
       "name": "Illuminated Cargo Sill Trim (Hybrid) ",
-      "price": 436.25,
+      "price": 560,
       "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
       "image": "",
       "description": "",
@@ -115,7 +115,7 @@
     },
     "CRV0024011I": {
       "name": "Illuminated Cargo Sill Trim ",
-      "price": 436.25,
+      "price": 560,
       "trimsAvailable": ["All"],
       "image": "",
       "description": "",
@@ -159,7 +159,7 @@
     },
     "CRV0024015I": {
       "name": "Seat Back Protector (Hybrid) ",
-      "price": 178.75,
+      "price": 220,
       "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
       "image": "",
       "description": "",
@@ -170,7 +170,7 @@
     },
     "CRV0024016I": {
       "name": "Seat Back Protector ",
-      "price": 178.75,
+      "price": 220,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "",
       "description": "",
@@ -183,7 +183,7 @@
   "Exterior": {
     "CRV0024030": {
       "name": "18-in Black Alloy Wheel",
-      "price": 2580.0,
+      "price": 2621.25,
       "cost": 0.0,
       "trimsAvailable": ["All"],
       "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/03-Wheels/MY23-CRV-BAP-modal-18-in-Black-Alloy-Wheel-THUMB.jpg",
@@ -195,7 +195,7 @@
     },
     "CRV0024012": {
       "name": "18-in HPD Bronze Alloy Wheel",
-      "price": 2580.0,
+      "price": 2621.25,
       "cost": 0.0,
       "trimsAvailable": ["All"],
       "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/03-Wheels/MY23-CRV-BAP-modal-18-in-HPD-Bronze-Alloy-Wheel-THUMB.jpg",
@@ -207,7 +207,7 @@
     },
     "CRV0024004": {
       "name": "Bike Attachment w/ Crossbars",
-      "price": 799.38,
+      "price": 964.38,
       "cost": 0.0,
       "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
       "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Bike-Attachment-THUMB.jpg",
@@ -219,7 +219,7 @@
     },
     "CRV0024070": {
       "name": "Bike Attachment w/ Roof Rails and Crossbars",
-      "price": 1433.75,
+      "price": 1701.88,
       "cost": 0.0,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Bike-Attachment-THUMB.jpg",
@@ -231,7 +231,7 @@
     },
     "CRV0024040": {
       "name": "Black Emblems (H Mark - RR only, CR-V)",
-      "price": 376.88,
+      "price": 603.75,
       "cost": 0.0,
       "trimsAvailable": [],
       "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Black-Emblems-H-Mark-CR-V-2x.jpg",
@@ -243,7 +243,7 @@
     },
     "CRV0024056": {
       "name": "Black Emblems (Sport)",
-      "price": 91.25,
+      "price": 132.5,
       "cost": 0.0,
       "trimsAvailable": ["Sport", "Sport Touring", "Sport-L"],
       "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Black-Emblems-Sport-2x.jpg",
@@ -267,7 +267,7 @@
     },
     "CRV0024005": {
       "name": "Body Side Molding",
-      "price": 370.0,
+      "price": 493.75,
       "cost": 0.0,
       "trimsAvailable": ["All"],
       "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Body-Side-Molding-2x.jpg",
@@ -279,7 +279,7 @@
     },
     "CRV0024006": {
       "name": "Crossbars",
-      "price": 411.88,
+      "price": 453.13,
       "cost": 0.0,
       "trimsAvailable": [],
       "image": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2023/CR-V/BAP-Modals/04-Exterior/MY23-CRV-BAP-modal-Crossbars-2x.jpg",
@@ -292,7 +292,7 @@
 
     "CRV0024100": {
       "name": "Decal Graphics, HPD",
-      "price": 151.25,
+      "price": 333.13,
       "cost": 0.0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -340,7 +340,7 @@
     },
     "CRV0024008": {
       "name": "Door Visors",
-      "price": 359.38,
+      "price": 462.5,
       "cost": 0.0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -364,7 +364,7 @@
     },
     "CRV0024033": {
       "name": "Fender Emblems",
-      "price": 185.0,
+      "price": 226.25,
       "cost": 0.0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -376,7 +376,7 @@
     },
     "CRV0024049": {
       "name": "Fender Flares",
-      "price": 785.0,
+      "price": 1032.5,
       "cost": 0.0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -412,7 +412,7 @@
     },
     "CRV0024051": {
       "name": "Kayak Attachment w/ Crossbars",
-      "price": 783.13,
+      "price": 865.63,
       "cost": 0.0,
       "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
       "image": "",
@@ -424,7 +424,7 @@
     },
     "CRV0024066": {
       "name": "Kayak Attachment w/ Roof Rails and Crossbars",
-      "price": 1417.5,
+      "price": 1603.13,
       "cost": 0.0,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "",
@@ -436,7 +436,7 @@
     },
     "CRV0024019": {
       "name": "Lower Door Trim Accent",
-      "price": 542.5,
+      "price": 625,
       "cost": 0.0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -460,7 +460,7 @@
     },
     "CRV0024015": {
       "name": "Roof Basket w/ Crossbars",
-      "price": 986.88,
+      "price": 1110.63,
       "cost": 0.0,
       "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
       "image": "",
@@ -473,7 +473,7 @@
 
     "CRV0024071": {
       "name": "Roof Basket w/ Roof Rails and Crossbars ",
-      "price": 1621.25,
+      "price": 1848.13,
       "cost": 0,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "",
@@ -486,7 +486,7 @@
 
     "CRV0024034": {
       "name": "Roof Box - Short w/ Roof Rails and Crossbars ",
-      "price": 1741.25,
+      "price": 1926.88,
       "cost": 0,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "",
@@ -499,7 +499,7 @@
 
     "CRV0024023": {
       "name": "Roof Rails ",
-      "price": 634.38,
+      "price": 737.5,
       "cost": 0,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "",
@@ -512,7 +512,7 @@
 
     "CRV0024072": {
       "name": "Roof Rox - Short w/ Crossbars ",
-      "price": 1106.88,
+      "price": 1210.01,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -538,7 +538,7 @@
 
     "CRV0024067": {
       "name": "Ski Attachment w/ Crossbars ",
-      "price": 779.69,
+      "price": 886.88,
       "cost": 0,
       "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
       "image": "",
@@ -551,7 +551,7 @@
 
     "CRV0024009": {
       "name": "Ski Attachment w/ Roof Rails and Crossbars ",
-      "price": 1414.06,
+      "price": 1954.38,
       "cost": 0,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "",
@@ -564,7 +564,7 @@
 
     "CRV0024020": {
       "name": "Splash Guard Set",
-      "price": 245.0,
+      "price": 265.63,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -577,7 +577,7 @@
 
     "CRV0024035": {
       "name": "Surboard Attachment w/ Crossbars ",
-      "price": 664.38,
+      "price": 746.88,
       "cost": 0,
       "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
       "image": "",
@@ -590,7 +590,7 @@
 
     "CRV0024069": {
       "name": "Surfboard Attachment w/ Roof Rails and Crossbars ",
-      "price": 1298.75,
+      "price": 1484.38,
       "cost": 0,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "",
@@ -603,7 +603,7 @@
 
     "CRV0024042": {
       "name": "Tailgate Spoiler ",
-      "price": 542.5,
+      "price": 666.25,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -629,7 +629,7 @@
 
     "CRV0024721": {
       "name": "Trailer Hitch (Touring) ",
-      "price": 993.13,
+      "price": 1199.38,
       "cost": 0,
       "trimsAvailable": ["Sport Touring"],
       "image": "",
@@ -642,7 +642,7 @@
 
     "CRV0024094": {
       "name": "Trailer Hitch Ball - 1 7/8-in ",
-      "price": 21.25,
+      "price": 26.29,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -655,7 +655,7 @@
 
     "CRV0024093": {
       "name": "Trailer Hitch Ball - 2-in ",
-      "price": 21.25,
+      "price": 28.94,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -668,7 +668,7 @@
 
     "CRV0024092": {
       "name": "Trailer Hitch Harness ",
-      "price": 412.5,
+      "price": 618.75,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -694,7 +694,7 @@
 
     "CRV0024036": {
       "name": "Trailer Hitch ",
-      "price": 722.5,
+      "price": 928.75,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -733,7 +733,7 @@
 
     "CRV0024088": {
       "name": "Wheel Lock Nut Black ",
-      "price": 156.25,
+      "price": 197.5,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -746,7 +746,7 @@
 
     "CRV0024087": {
       "name": "Wheel Lock Nut Chrome ",
-      "price": 120.0,
+      "price": 161.25,
       "cost": 0,
       "trimsAvailable": ["All"],
       "image": "",
@@ -820,7 +820,7 @@
     },
     "CRV0024005E": {
       "name": "Parking Sensors (Hybrid)",
-      "price": 1850.0,
+      "price": 2138.75,
       "cost": 0,
       "trimsAvailable": ["Sport", "Sport-L", "Sport Touring"],
       "image": "",
@@ -832,7 +832,7 @@
     },
     "CRV0024006E": {
       "name": "Parking Sensors",
-      "price": 1850.0,
+      "price": 2138.75,
       "cost": 0,
       "trimsAvailable": ["LX", "EX", "EX-L"],
       "image": "",
@@ -844,7 +844,7 @@
     },
     "CRV0024007E": {
       "name": "Wireless Charger (EX, Sport)",
-      "price": 685.0,
+      "price": 932.5,
       "cost": 0,
       "trimsAvailable": ["EX", "Sport"],
       "image": "",
@@ -856,7 +856,7 @@
     },
     "CRV0024008E": {
       "name": "Wireless Charger (LX)",
-      "price": 643.75,
+      "price": 850,
       "cost": 0,
       "trimsAvailable": ["LX"],
       "image": "",

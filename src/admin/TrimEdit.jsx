@@ -124,7 +124,7 @@ function TrimEdit() {
       {editedData && (
         <>
           {/* <pre>{JSON.stringify(editedData, null, 2)}</pre> */}
-          <div>{renderJSON(editedData)}</div>
+          {/* <div>{renderJSON(editedData)}</div> */}
           <button onClick={handleSave} className="bg-green-500 py-2 px-4 max-w-xs ">
             Save Data
           </button>
